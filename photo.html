@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <link rel="icon" type="image/x-icon" href="WhatsApp Image 2025-09-22 at 07.34.31_77baff7a.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo-Gallary</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+         * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+            color: #334155;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 1rem;
+        }
+        .header-logo {
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+        }
+      .container1 {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    h1::before {
+      content: "—";
+      margin-right: 10px;
+      color: #333;
+    }
+
+    /* Gallery Grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 30px;
+    }
+
+    /* Gallery Item */
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 10px;
+    }
+
+    /* Caption */
+    .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 500;
+      border-radius: 0 0 10px 10px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+</style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <!-- Logo with Car and Tractor icons -->
+                <div class="header-logo flex items-center">
+                    <img src="WhatsApp Image 2025-09-22 at 07.34.31_77baff7a.jpg" alt="Logo" class="rounded-full w-12 h-12">
+                    <span class="text-2xl font-bold text-gray-800 ml-2">Verma Vahan Seva</span>
+                </div>
+            </div>
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="index.html" class="text-gray-600 hover:text-green-600 transition duration-300 font-medium">Services</a>
+                <a href="index.html" class="text-gray-600 hover:text-green-600 transition duration-300 font-medium">About Us</a>
+                <a href="index.html" class="text-gray-600 hover:text-green-600 transition duration-300 font-medium">Contact</a>
+                 <a href="photo.html" class="text-gray-600 hover:text-green-600 transition duration-300 font-medium">Picture Gallery</a>
+                <button id="bookNowBtn" class="bg-green-500 text-white font-semibold py-2 px-6 rounded-full shadow-lg hover:bg-green-600 transition duration-300">Book Now</button>
+            </nav>
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-gray-600 hover:text-green-600 focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+            <a href="#services" class="block py-3 px-6 text-gray-600 hover:bg-gray-100 font-medium">Services</a>
+            <a href="#about" class="block py-3 px-6 text-gray-600 hover:bg-gray-100 font-medium">About Us</a>
+            <a href="#contact" class="block py-3 px-6 text-gray-600 hover:bg-gray-100 font-medium">Contact</a>
+            <button id="mobileBookBtn" class="w-full bg-green-500 text-white font-semibold py-3 px-6 rounded-b-lg hover:bg-green-600 transition duration-300">Book Now</button>
+        </div>
+    </header>
+      <div class="container1">
+    <h1>PHOTO-GALLERY</h1>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="https://picsum.photos/id/1015/600/400" >
+       
+      </div>
+      <div class="gallery-item">
+        <img src="https://picsum.photos/id/1025/600/400" >
+             </div>
+      <div class="gallery-item">
+        <img src="https://picsum.photos/id/1035/600/400">
+             </div>
+      <div class="gallery-item">
+        <img src="https://picsum.photos/id/1045/600/400" >
+       
+      </div>
+      <div class="gallery-item">
+        <img src="https://picsum.photos/id/1055/600/400" >
+        
+      </div>
+      <div class="gallery-item">
+        <img src="https://picsum.photos/id/1065/600/400" >
+        </div>
+        <div class="gallery-item">
+        <img src="https://picsum.photos/id/1065/600/400" >
+        </div>
+        <div class="gallery-item">
+        <img src="https://picsum.photos/id/1065/600/400" >
+        </div>
+        <div class="gallery-item">
+        <img src="https://picsum.photos/id/1065/600/400" >
+        </div>
+        <div class="gallery-item">
+        <img src="https://picsum.photos/id/1065/600/400" >
+        </div>
+        <div class="gallery-item">
+        <img src="https://picsum.photos/id/1065/600/400" >
+        </div>
+        <div class="gallery-item">
+        <img src="https://picsum.photos/id/1065/600/400" >
+        </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services Section</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .services-section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 50px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .services-text {
+      flex: 1 1 40%;
+      min-width: 280px;
+      padding: 20px;
+    }
+
+    .services-text h5 {
+      color: #6c63ff;
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .services-text h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    .services-text p {
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .services-text .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      background: #6c63ff;
+      color: #fff;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .services-text .btn:hover {
+      background: #5146d8;
+    }
+
+    .services-grid {
+      flex: 1 1 55%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .service-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-card img {
+      width: 50px;
+      margin-bottom: 15px;
+    }
+
+    .service-card h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .service-card p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 900px) {
+      .services-section {
+        flex-direction: column;
+      }
+
+      .services-text, .services-grid {
+        flex: 1 1 100%;
+        text-align: center;
+      }
+
+      .services-text {
+        margin-bottom: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <section class="services-section">
+    <!-- Left Text -->
+    <div class="services-text">
+      <h5>OUR SERVICES</h5>
+      <h2>We Provide A Lot of Cool Services</h2>
+      <p>
+        Far far away, behind the word mountains, far from the countries Vokalia 
+        and Consonantia, there live the blind texts. Separated they live in 
+        Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+      </p>
+      <a href="#" class="btn">Our Services</a>
+    </div>
+
+    <!-- Right Grid -->
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="https://img.icons8.com/ios/50/000000/marketing.png" alt="Marketing">
+        <h3>Marketing</h3>
+        <p>Even the all-powerful Pointing has no control about the blind texts.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://img.icons8.com/ios/50/000000/seo.png" alt="SEO">
+        <h3>SEO</h3>
+        <p>Even the all-powerful Pointing has no control about the blind texts.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://img.icons8.com/ios/50/000000/design--v1.png" alt="UI/UX">
+        <h3>UI/UX Design</h3>
+        <p>Even the all-powerful Pointing has no control about the blind texts.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://img.icons8.com/ios/50/000000/idea.png" alt="Creative">
+        <h3>Creative</h3>
+        <p>Even the all-powerful Pointing has no control about the blind texts.</p>
+      </div>
+     
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

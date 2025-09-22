@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <link rel="icon" type="image/x-icon" href="WhatsApp Image 2025-09-22 at 07.34.31_77baff7a.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tractor-Details</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+         * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+            color: #334155;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 1rem;
+        }
+        .header-logo {
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+        }
+      .hero {
+      position: relative;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .hero img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* Welcome Text */
+    .welcome {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .welcome p {
+      color: #f4a300;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .welcome h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .tagline {
+        font-size: 1rem;
+        padding: 0.8rem 1rem;
+      }
+
+      .welcome h2 {
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .tagline {
+        top: 15%;
+        font-size: 0.9rem;
+      }
+
+      .welcome h2 {
+        font-size: 1rem;
+      }
+    }
+            .services-section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 50px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .services-text {
+      flex: 1 1 40%;
+      min-width: 280px;
+      padding: 20px;
+    }
+
+    .services-text h5 {
+      color: #6c63ff;
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .services-text h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    .services-text p {
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .services-text .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      background: #6c63ff;
+      color: #fff;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .services-text .btn:hover {
+      background: #5146d8;
+    }
+
+    .services-grid {
+      flex: 1 1 55%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .service-card {
+      background: #f9f9f9;
+      border-radius: 12px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: 0.3s;
+     
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-card img {
+      width: 50px;
+      margin-bottom: 15px;
+      margin-left: 110px;
+    }
+
+    .service-card h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .service-card p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 900px) {
+      .services-section {
+        flex-direction: column;
+      }
+
+      .services-text, .services-grid {
+        flex: 1 1 100%;
+        text-align: center;
+      }
+
+      .services-text {
+        margin-bottom: 30px;
+      }
+    }
+</style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <!-- Logo with Car and Tractor icons -->
+                <div class="header-logo flex items-center">
+                    <img src="WhatsApp Image 2025-09-22 at 07.34.31_77baff7a.jpg" alt="Logo" class="rounded-full w-12 h-12">
+                    <span class="text-2xl font-bold text-gray-800 ml-2">Verma Vahan Seva</span>
+                </div>
+            </div>
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="index.html" class="text-gray-600 hover:text-green-600 transition duration-300 font-medium">Services</a>
+                <a href="index.html" class="text-gray-600 hover:text-green-600 transition duration-300 font-medium">About Us</a>
+                <a href="index.html" class="text-gray-600 hover:text-green-600 transition duration-300 font-medium">Contact</a>
+                 <a href="photo.html" class="text-gray-600 hover:text-green-600 transition duration-300 font-medium">Picture Gallery</a>
+                <button id="bookNowBtn" class="bg-green-500 text-white font-semibold py-2 px-6 rounded-full shadow-lg hover:bg-green-600 transition duration-300">Book Now</button>
+            </nav>
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-gray-600 hover:text-green-600 focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+            <a href="#services" class="block py-3 px-6 text-gray-600 hover:bg-gray-100 font-medium">Services</a>
+            <a href="#about" class="block py-3 px-6 text-gray-600 hover:bg-gray-100 font-medium">About Us</a>
+            <a href="#contact" class="block py-3 px-6 text-gray-600 hover:bg-gray-100 font-medium">Contact</a>
+            <button id="mobileBookBtn" class="w-full bg-green-500 text-white font-semibold py-3 px-6 rounded-b-lg hover:bg-green-600 transition duration-300">Book Now</button>
+        </div>
+    </header>
+      <section class="hero">
+    <!-- Replace this image with your taxi illustration -->
+    <img src="https://static.vecteezy.com/system/resources/previews/014/400/888/non_2x/tractor-plowing-farm-field-traditional-agriculture-free-vector.jpg"alt="Taxi Service Illustration">
+  </section>
+
+  <!-- Welcome Text -->
+  <div class="welcome">
+    <p>What We Offer</p>
+    <h2>WELCOME TO US</h2>
+  </div>
+   <section class="services-section">
+    <!-- Left Text -->
+    <div class="services-text">
+      <h5>OUR SERVICES</h5>
+      <h2>We Provide A Lot of Cool Services</h2>
+      <p>
+       We provide you with our services such as ploughing the fields, threshing of paddy and wheat, trolley etc. We have a hand-driven tractor, 4X4 tractor and a small tractor. We will provide you with the best services. You can view all the photos in our photo gallery.
+       <br>Thanks...
+       <br>Book Now!!
+      </p>
+      <a href="index.html" class="btn">Book Now</a>
+    </div>
+
+    <!-- Right Grid -->
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="https://static.vecteezy.com/system/resources/previews/042/966/137/non_2x/tractor-line-grey-circle-icon-vector.jpg" alt="Marketing">
+        <h3>Tractors</h3>
+        <p>We will provide you multiples tractors.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://p1.hiclipart.com/preview/113/230/412/black-circle-academic-certificate-academic-degree-certification-diploma-professional-certification-logo-graduate-certificate-png-clipart.jpg" alt="SEO">
+        <h3>Experience</h3>
+        <p>Drivers have best driving experience for this fields.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/15772/15772135.png" alt="UI/UX">
+        <h3>Papers and Other</h3>
+        <p>All the papers and documents of our vehicles are complete.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1803/1803911.png" alt="Creative">
+        <h3>Rating</h3>
+        <p>We are the provide best feature and saftey.</p>
+      </div>
+     
+      </div>
+    </div>
+  </section>
+</body>
+</html>
