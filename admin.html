@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel - Verma Digital Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{dark:"#0a0a14",surface:"#12122a"},fontFamily:{poppins:["Poppins","sans-serif"]}}}}</script>
+  <style>body{background-color:#0a0a14;font-family:"Poppins",sans-serif;color:#f1f5f9}::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:#0a0a14}::-webkit-scrollbar-thumb{background:#8b5cf6;border-radius:3px}.admin-link.active{background:rgba(249,115,22,0.1);color:#f97316;border-right:2px solid #f97316}.admin-pane.hidden{display:none}</style>
+</head>
+<body class="flex h-screen overflow-hidden">
+<!-- Admin Sidebar -->
+<aside class="w-56 flex-shrink-0 flex flex-col h-full" style="background:#0d0d1f;border-right:1px solid rgba(255,255,255,0.08)">
+  <div class="p-5 flex items-center gap-2 border-b" style="border-color:rgba(255,255,255,0.08)">
+    <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background:linear-gradient(135deg,#f97316,#8b5cf6)">
+      <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2zm0 14a6 6 0 110-12 6 6 0 010 12z"/></svg>
+    </div>
+    <div>
+      <div class="text-white font-bold text-xs">Verma Digital</div>
+      <div class="text-xs" style="color:#f97316">Admin Panel</div>
+    </div>
+  </div>
+  <nav class="flex-1 p-3 space-y-1 pt-4">
+    <button onclick="showAdmin('dashboard')" class="admin-link active w-full flex items-center gap-3 px-4 py-2.5 rounded-lg text-xs text-left">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+      Dashboard
+    </button>
+    <button onclick="showAdmin('products')" class="admin-link w-full flex items-center gap-3 px-4 py-2.5 rounded-lg text-xs text-left" style="color:#94a3b8">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+      Products
+    </button>
+    <button onclick="showAdmin('orders')" class="admin-link w-full flex items-center gap-3 px-4 py-2.5 rounded-lg text-xs text-left" style="color:#94a3b8">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+      Orders
+    </button>
+    <button onclick="showAdmin('users')" class="admin-link w-full flex items-center gap-3 px-4 py-2.5 rounded-lg text-xs text-left" style="color:#94a3b8">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+      Users
+    </button>
+    <button onclick="showAdmin('settings')" class="admin-link w-full flex items-center gap-3 px-4 py-2.5 rounded-lg text-xs text-left" style="color:#94a3b8">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+      Settings
+    </button>
+  </nav>
+  <div class="p-4 border-t" style="border-color:rgba(255,255,255,0.08)">
+    <div class="flex items-center gap-2 mb-3">
+      <div class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs" style="background:linear-gradient(135deg,#f97316,#8b5cf6)">RV</div>
+      <div><div class="text-xs font-medium">Admin</div><div class="text-xs" style="color:#94a3b8">Rahul Verma</div></div>
+    </div>
+    <a href="index.html" class="block text-xs text-center py-1.5 rounded-full" style="border:1px solid rgba(255,255,255,0.15);color:#94a3b8">Back to Site</a>
+  </div>
+</aside>
+
+<!-- Admin Main -->
+<main class="flex-1 overflow-y-auto">
+  <div class="sticky top-0 z-10 px-6 py-4 flex items-center justify-between" style="background:#0a0a14;border-bottom:1px solid rgba(255,255,255,0.08)">
+    <h1 class="font-semibold" id="adminTitle">Dashboard</h1>
+    <div class="flex gap-2">
+      <button onclick="alert('Add Product form coming soon!')" class="text-xs px-4 py-2 rounded-full" style="background:#f97316;color:white">+ Add Product</button>
+      <button onclick="alert('Reports downloaded!')" class="text-xs px-4 py-2 rounded-full" style="background:#12122a;border:1px solid rgba(255,255,255,0.15);color:#94a3b8">Export Report</button>
+    </div>
+  </div>
+
+  <div class="p-6">
+    <!-- Dashboard -->
+    <div id="admin-dashboard" class="admin-pane">
+      <!-- Stats -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        <div class="p-5 rounded-xl" style="background:#12122a;border:1px solid rgba(255,255,255,0.08)">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs" style="color:#94a3b8">Total Products</span>
+            <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background:rgba(249,115,22,0.1)"><svg class="w-4 h-4" style="color:#f97316" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg></div>
+          </div>
+          <div class="text-2xl font-bold">156</div>
+          <div class="text-xs mt-1" style="color:#10b981">↑ +12 this month</div>
+        </div>
+        <div class="p-5 rounded-xl" style="background:#12122a;border:1px solid rgba(255,255,255,0.08)">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs" style="color:#94a3b8">Total Orders</span>
+            <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background:rgba(139,92,246,0.1)"><svg class="w-4 h-4" style="color:#8b5cf6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg></div>
+          </div>
+          <div class="text-2xl font-bold">1,284</div>
+          <div class="text-xs mt-1" style="color:#10b981">↑ +89 this month</div>
+        </div>
+        <div class="p-5 rounded-xl" style="background:#12122a;border:1px solid rgba(255,255,255,0.08)">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs" style="color:#94a3b8">Revenue</span>
+            <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background:rgba(16,185,129,0.1)"><svg class="w-4 h-4" style="color:#10b981" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+          </div>
+          <div class="text-2xl font-bold" style="color:#10b981">₹9.8L</div>
+          <div class="text-xs mt-1" style="color:#10b981">↑ +15% this month</div>
+        </div>
+        <div class="p-5 rounded-xl" style="background:#12122a;border:1px solid rgba(255,255,255,0.08)">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs" style="color:#94a3b8">Total Users</span>
+            <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background:rgba(249,115,22,0.1)"><svg class="w-4 h-4" style="color:#f97316" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg></div>
+          </div>
+          <div class="text-2xl font-bold">2,847</div>
+          <div class="text-xs mt-1" style="color:#10b981">↑ +234 this month</div>
+        </div>
+      </div>
+
+      <!-- Recent Orders -->
+      <div class="mb-8">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="font-semibold">Recent Orders</h2>
+          <button onclick="showAdmin('orders')" class="text-xs" style="color:#f97316">View All</button>
+        </div>
+        <div class="rounded-xl overflow-hidden" style="border:1px solid rgba(255,255,255,0.08)">
+          <table class="w-full text-xs">
+            <thead><tr style="background:#12122a;border-bottom:1px solid rgba(255,255,255,0.08)"><th class="text-left px-4 py-3">Order ID</th><th class="text-left px-4 py-3">Product</th><th class="text-left px-4 py-3">Date</th><th class="text-right px-4 py-3">Amount</th><th class="text-center px-4 py-3">Status</th></tr></thead>
+            <tbody>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.05)"><td class="px-4 py-2.5" style="color:#94a3b8">#ORD-2024-001</td><td class="px-4 py-2.5">E-Commerce React App</td><td class="px-4 py-2.5" style="color:#94a3b8">Jan 15, 2024</td><td class="px-4 py-2.5 text-right" style="color:#f97316">₹1,499</td><td class="px-4 py-2.5 text-center"><span class="px-2 py-0.5 rounded-full" style="background:rgba(16,185,129,0.1);color:#10b981">Delivered</span></td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.05)"><td class="px-4 py-2.5" style="color:#94a3b8">#ORD-2024-002</td><td class="px-4 py-2.5">SaaS Landing Page</td><td class="px-4 py-2.5" style="color:#94a3b8">Jan 20, 2024</td><td class="px-4 py-2.5 text-right" style="color:#f97316">₹799</td><td class="px-4 py-2.5 text-center"><span class="px-2 py-0.5 rounded-full" style="background:rgba(16,185,129,0.1);color:#10b981">Delivered</span></td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.05)"><td class="px-4 py-2.5" style="color:#94a3b8">#ORD-2024-003</td><td class="px-4 py-2.5">React.js Course</td><td class="px-4 py-2.5" style="color:#94a3b8">Feb 1, 2024</td><td class="px-4 py-2.5 text-right" style="color:#f97316">₹999</td><td class="px-4 py-2.5 text-center"><span class="px-2 py-0.5 rounded-full" style="background:rgba(139,92,246,0.1);color:#8b5cf6">Active</span></td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.05)"><td class="px-4 py-2.5" style="color:#94a3b8">#ORD-2024-004</td><td class="px-4 py-2.5">Inventory System</td><td class="px-4 py-2.5" style="color:#94a3b8">Feb 10, 2024</td><td class="px-4 py-2.5 text-right" style="color:#f97316">₹3,499</td><td class="px-4 py-2.5 text-center"><span class="px-2 py-0.5 rounded-full" style="background:rgba(245,158,11,0.1);color:#f59e0b">Processing</span></td></tr>
+              <tr><td class="px-4 py-2.5" style="color:#94a3b8">#ORD-2024-005</td><td class="px-4 py-2.5">Pro Plan Subscription</td><td class="px-4 py-2.5" style="color:#94a3b8">Feb 15, 2024</td><td class="px-4 py-2.5 text-right" style="color:#f97316">₹2,499</td><td class="px-4 py-2.5 text-center"><span class="px-2 py-0.5 rounded-full" style="background:rgba(139,92,246,0.1);color:#8b5cf6">Active</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Products Table -->
+      <div>
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="font-semibold">Top Products</h2>
+          <button onclick="showAdmin('products')" class="text-xs" style="color:#f97316">Manage All</button>
+        </div>
+        <div class="rounded-xl overflow-hidden" style="border:1px solid rgba(255,255,255,0.08)">
+          <table class="w-full text-xs">
+            <thead><tr style="background:#12122a;border-bottom:1px solid rgba(255,255,255,0.08)"><th class="text-left px-4 py-3">Product</th><th class="text-left px-4 py-3">Category</th><th class="text-right px-4 py-3">Price</th><th class="text-right px-4 py-3">Sales</th><th class="text-center px-4 py-3">Actions</th></tr></thead>
+            <tbody>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.05)"><td class="px-4 py-2.5">E-Commerce React App</td><td class="px-4 py-2.5" style="color:#94a3b8">Source Code</td><td class="px-4 py-2.5 text-right" style="color:#f97316">₹1,499</td><td class="px-4 py-2.5 text-right">247</td><td class="px-4 py-2.5 text-center"><button onclick="alert('Edit product')" class="px-2 py-1 rounded mr-1" style="background:rgba(249,115,22,0.1);color:#f97316">Edit</button><button onclick="alert('Delete?')" class="px-2 py-1 rounded" style="background:rgba(239,68,68,0.1);color:#ef4444">Del</button></td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.05)"><td class="px-4 py-2.5">School Management System</td><td class="px-4 py-2.5" style="color:#94a3b8">Software</td><td class="px-4 py-2.5 text-right" style="color:#f97316">₹4,999</td><td class="px-4 py-2.5 text-right">189</td><td class="px-4 py-2.5 text-center"><button onclick="alert('Edit product')" class="px-2 py-1 rounded mr-1" style="background:rgba(249,115,22,0.1);color:#f97316">Edit</button><button onclick="alert('Delete?')" class="px-2 py-1 rounded" style="background:rgba(239,68,68,0.1);color:#ef4444">Del</button></td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.05)"><td class="px-4 py-2.5">Cryptocurrency Dashboard</td><td class="px-4 py-2.5" style="color:#94a3b8">Source Code</td><td class="px-4 py-2.5 text-right" style="color:#f97316">₹2,499</td><td class="px-4 py-2.5 text-right">156</td><td class="px-4 py-2.5 text-center"><button onclick="alert('Edit product')" class="px-2 py-1 rounded mr-1" style="background:rgba(249,115,22,0.1);color:#f97316">Edit</button><button onclick="alert('Delete?')" class="px-2 py-1 rounded" style="background:rgba(239,68,68,0.1);color:#ef4444">Del</button></td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.05)"><td class="px-4 py-2.5">Inventory Management</td><td class="px-4 py-2.5" style="color:#94a3b8">Software</td><td class="px-4 py-2.5 text-right" style="color:#f97316">₹3,499</td><td class="px-4 py-2.5 text-right">134</td><td class="px-4 py-2.5 text-center"><button onclick="alert('Edit product')" class="px-2 py-1 rounded mr-1" style="background:rgba(249,115,22,0.1);color:#f97316">Edit</button><button onclick="alert('Delete?')" class="px-2 py-1 rounded" style="background:rgba(239,68,68,0.1);color:#ef4444">Del</button></td></tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.05)"><td class="px-4 py-2.5">Blog CMS Platform</td><td class="px-4 py-2.5" style="color:#94a3b8">Dynamic</td><td class="px-4 py-2.5 text-right" style="color:#f97316">₹2,199</td><td class="px-4 py-2.5 text-right">112</td><td class="px-4 py-2.5 text-center"><button onclick="alert('Edit product')" class="px-2 py-1 rounded mr-1" style="background:rgba(249,115,22,0.1);color:#f97316">Edit</button><button onclick="alert('Delete?')" class="px-2 py-1 rounded" style="background:rgba(239,68,68,0.1);color:#ef4444">Del</button></td></tr>
+              <tr><td class="px-4 py-2.5">Hotel Booking Platform</td><td class="px-4 py-2.5" style="color:#94a3b8">Dynamic</td><td class="px-4 py-2.5 text-right" style="color:#f97316">₹2,999</td><td class="px-4 py-2.5 text-right">98</td><td class="px-4 py-2.5 text-center"><button onclick="alert('Edit product')" class="px-2 py-1 rounded mr-1" style="background:rgba(249,115,22,0.1);color:#f97316">Edit</button><button onclick="alert('Delete?')" class="px-2 py-1 rounded" style="background:rgba(239,68,68,0.1);color:#ef4444">Del</button></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Products Pane -->
+    <div id="admin-products" class="admin-pane hidden">
+      <h2 class="text-xl font-bold mb-6">Manage Products</h2>
+      <div class="flex gap-3 mb-5">
+        <input type="text" placeholder="Search products..." class="flex-1 px-4 py-2 rounded-full text-sm outline-none" style="background:#12122a;border:1px solid rgba(255,255,255,0.15);color:#f1f5f9">
+        <button onclick="alert('Add Product form coming soon!')" class="text-xs px-5 py-2 rounded-full" style="background:#f97316;color:white">+ Add New</button>
+      </div>
+      <p class="text-sm" style="color:#94a3b8">Showing all 156 products. Use the table on the Dashboard for quick edits.</p>
+    </div>
+
+    <!-- Orders Pane -->
+    <div id="admin-orders" class="admin-pane hidden">
+      <h2 class="text-xl font-bold mb-6">All Orders</h2>
+      <div class="flex gap-3 mb-5">
+        <select class="px-4 py-2 rounded-full text-xs outline-none" style="background:#12122a;border:1px solid rgba(255,255,255,0.15);color:#94a3b8"><option>All Status</option><option>Delivered</option><option>Processing</option><option>Active</option></select>
+      </div>
+      <p class="text-sm" style="color:#94a3b8">Total 1,284 orders. Filter and search functionality available.</p>
+    </div>
+
+    <!-- Users Pane -->
+    <div id="admin-users" class="admin-pane hidden">
+      <h2 class="text-xl font-bold mb-6">User Management</h2>
+      <p class="text-sm" style="color:#94a3b8">2,847 registered users. Pro: 456, Basic: 1,234, Free: 1,157</p>
+    </div>
+
+    <!-- Settings Pane -->
+    <div id="admin-settings" class="admin-pane hidden">
+      <h2 class="text-xl font-bold mb-6">Admin Settings</h2>
+      <form onsubmit="event.preventDefault();alert('Settings saved!')" class="max-w-md space-y-4">
+        <div><label class="block text-xs mb-1.5" style="color:#94a3b8">Site Name</label><input type="text" value="Verma Digital Studio" class="w-full px-4 py-3 rounded-xl text-sm outline-none" style="background:#12122a;border:1px solid rgba(255,255,255,0.15);color:#f1f5f9"></div>
+        <div><label class="block text-xs mb-1.5" style="color:#94a3b8">Contact Email</label><input type="email" value="hello@vermadigital.in" class="w-full px-4 py-3 rounded-xl text-sm outline-none" style="background:#12122a;border:1px solid rgba(255,255,255,0.15);color:#f1f5f9"></div>
+        <button type="submit" class="px-6 py-2.5 rounded-full text-sm font-medium text-white" style="background:#f97316">Save Settings</button>
+      </form>
+    </div>
+  </div>
+</main>
+<script>
+  function showAdmin(tab) {
+    document.querySelectorAll('.admin-pane').forEach(p => p.classList.add('hidden'));
+    document.getElementById('admin-'+tab).classList.remove('hidden');
+    document.querySelectorAll('.admin-link').forEach(l => { l.classList.remove('active'); l.style.color='#94a3b8'; });
+    event.currentTarget.classList.add('active');
+    const titles = {dashboard:'Dashboard',products:'Products',orders:'Orders',users:'Users',settings:'Settings'};
+    document.getElementById('adminTitle').textContent = titles[tab];
+  }
+</script>
+</body>
+</html>

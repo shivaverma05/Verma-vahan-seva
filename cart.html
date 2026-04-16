@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart - Verma Digital Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{dark:"#0a0a14",surface:"#12122a"},fontFamily:{poppins:["Poppins","sans-serif"]}}}}</script>
+  <style>body{background-color:#0a0a14;font-family:"Poppins",sans-serif;color:#f1f5f9}::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:#0a0a14}::-webkit-scrollbar-thumb{background:#8b5cf6;border-radius:3px}.payment-radio:checked+label{border-color:#f97316;color:#f1f5f9}</style>
+</head>
+<body>
+<nav style="background:#0d0d1f;border-bottom:1px solid rgba(255,255,255,0.08);" class="sticky top-0 z-50">
+  <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background:linear-gradient(135deg,#f97316,#8b5cf6)">
+          <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2zm0 14a6 6 0 110-12 6 6 0 010 12z"/></svg>
+        </div>
+        <span class="text-white font-bold text-lg">Verma <span style="color:#f97316">Digital</span> Studio</span>
+      </a>
+      <div class="hidden md:flex items-center gap-6">
+        <a href="index.html" class="text-sm" style="color:#94a3b8">Home</a>
+        <a href="products.html" class="text-sm" style="color:#94a3b8">Products</a>
+        <a href="services.html" class="text-sm" style="color:#94a3b8">Services</a>
+        <a href="pricing.html" class="text-sm" style="color:#94a3b8">Pricing</a>
+      </div>
+      <div class="hidden md:flex items-center gap-3">
+        <a href="login.html" class="text-sm px-4 py-2 rounded-full border" style="color:#f1f5f9;border-color:rgba(255,255,255,0.2)">Login</a>
+        <a href="products.html" class="text-sm px-4 py-2 rounded-full" style="background:#f97316;color:white">Shop More</a>
+      </div>
+      <button id="mobileMenuBtn" class="md:hidden p-2" style="color:#f1f5f9">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden pb-4">
+      <a href="index.html" class="block py-2 text-sm" style="color:#94a3b8">Home</a>
+      <a href="products.html" class="block py-2 text-sm" style="color:#94a3b8">Products</a>
+    </div>
+  </div>
+</nav>
+<script>document.getElementById("mobileMenuBtn").addEventListener("click",function(){document.getElementById("mobileMenu").classList.toggle("hidden");});</script>
+
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <div class="flex items-center gap-2 text-xs mb-6" style="color:#94a3b8">
+    <a href="index.html" style="color:#94a3b8">Home</a><span>/</span><a href="products.html" style="color:#94a3b8">Products</a><span>/</span><span style="color:#f97316">Cart</span>
+  </div>
+  <h1 class="text-2xl font-bold mb-8">Your <span style="color:#f97316">Cart</span> <span class="text-base font-normal" style="color:#94a3b8">(4 items)</span></h1>
+
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <!-- Cart Items -->
+    <div class="lg:col-span-2 space-y-4">
+      <!-- Item 1 -->
+      <div class="p-5 rounded-xl border flex gap-4 items-start" style="background:#12122a;border-color:rgba(255,255,255,0.08)" id="item1">
+        <div class="w-16 h-16 rounded-xl flex-shrink-0 flex items-center justify-center" style="background:linear-gradient(135deg,#f97316,#dc2626)">
+          <svg class="w-8 h-8 text-white opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+        </div>
+        <div class="flex-1">
+          <h3 class="font-semibold text-sm">E-Commerce React App</h3>
+          <p class="text-xs mt-0.5" style="color:#94a3b8">Source Code &bull; React, Node.js, MongoDB</p>
+          <div class="flex items-center justify-between mt-3">
+            <span class="font-bold" style="color:#f97316">₹1,499</span>
+            <button onclick="removeItem('item1', 1499)" class="text-xs px-3 py-1.5 rounded-full" style="background:rgba(239,68,68,0.1);color:#ef4444">Remove</button>
+          </div>
+        </div>
+      </div>
+      <!-- Item 2 -->
+      <div class="p-5 rounded-xl border flex gap-4 items-start" style="background:#12122a;border-color:rgba(255,255,255,0.08)" id="item2">
+        <div class="w-16 h-16 rounded-xl flex-shrink-0 flex items-center justify-center" style="background:linear-gradient(135deg,#10b981,#059669)">
+          <svg class="w-8 h-8 text-white opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
+        </div>
+        <div class="flex-1">
+          <h3 class="font-semibold text-sm">SaaS Landing Page</h3>
+          <p class="text-xs mt-0.5" style="color:#94a3b8">Landing Page &bull; HTML, Tailwind</p>
+          <div class="flex items-center justify-between mt-3">
+            <span class="font-bold" style="color:#f97316">₹799</span>
+            <button onclick="removeItem('item2', 799)" class="text-xs px-3 py-1.5 rounded-full" style="background:rgba(239,68,68,0.1);color:#ef4444">Remove</button>
+          </div>
+        </div>
+      </div>
+      <!-- Item 3 (qty 2) -->
+      <div class="p-5 rounded-xl border flex gap-4 items-start" style="background:#12122a;border-color:rgba(255,255,255,0.08)" id="item3">
+        <div class="w-16 h-16 rounded-xl flex-shrink-0 flex items-center justify-center" style="background:linear-gradient(135deg,#8b5cf6,#6366f1)">
+          <svg class="w-8 h-8 text-white opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        </div>
+        <div class="flex-1">
+          <h3 class="font-semibold text-sm">Portfolio Website Template</h3>
+          <p class="text-xs mt-0.5" style="color:#94a3b8">Static &bull; HTML, CSS, JS</p>
+          <div class="flex items-center gap-3 mt-3">
+            <div class="flex items-center gap-2">
+              <button onclick="changeQty(-1)" class="w-7 h-7 rounded-full text-sm font-bold flex items-center justify-center" style="background:rgba(255,255,255,0.1)">-</button>
+              <span id="qty" class="text-sm font-medium">2</span>
+              <button onclick="changeQty(1)" class="w-7 h-7 rounded-full text-sm font-bold flex items-center justify-center" style="background:rgba(255,255,255,0.1)">+</button>
+            </div>
+            <span id="portfolioTotal" class="font-bold ml-auto" style="color:#f97316">₹998</span>
+            <button onclick="removeItem('item3', 998)" class="text-xs px-3 py-1.5 rounded-full" style="background:rgba(239,68,68,0.1);color:#ef4444">Remove</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coupon -->
+      <div class="p-5 rounded-xl border" style="background:#12122a;border-color:rgba(255,255,255,0.08)">
+        <h3 class="font-medium text-sm mb-3">Have a Coupon Code?</h3>
+        <div class="flex gap-3">
+          <input type="text" id="couponInput" placeholder="Enter coupon code (try VERMA20)" class="flex-1 px-4 py-2.5 rounded-full text-sm outline-none" style="background:#0a0a14;border:1px solid rgba(255,255,255,0.15);color:#f1f5f9">
+          <button onclick="applyCoupon()" class="px-5 py-2.5 rounded-full text-sm font-medium" style="background:#f97316;color:white">Apply</button>
+        </div>
+        <p id="couponMsg" class="text-xs mt-2"></p>
+      </div>
+
+      <!-- Payment Method -->
+      <div class="p-5 rounded-xl border" style="background:#12122a;border-color:rgba(255,255,255,0.08)">
+        <h3 class="font-medium text-sm mb-4">Payment Method</h3>
+        <div class="grid grid-cols-2 gap-3">
+          <label class="flex items-center gap-3 p-3 rounded-xl cursor-pointer border" style="border-color:rgba(255,255,255,0.15)">
+            <input type="radio" name="payment" value="upi" class="payment-radio" checked>
+            <span class="text-sm">📱 UPI</span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl cursor-pointer border" style="border-color:rgba(255,255,255,0.15)">
+            <input type="radio" name="payment" value="card" class="payment-radio">
+            <span class="text-sm">💳 Card</span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl cursor-pointer border" style="border-color:rgba(255,255,255,0.15)">
+            <input type="radio" name="payment" value="netbanking" class="payment-radio">
+            <span class="text-sm">🏦 Net Banking</span>
+          </label>
+          <label class="flex items-center gap-3 p-3 rounded-xl cursor-pointer border" style="border-color:rgba(255,255,255,0.15)">
+            <input type="radio" name="payment" value="wallet" class="payment-radio">
+            <span class="text-sm">👛 Wallets</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Order Summary -->
+    <div>
+      <div class="p-6 rounded-xl border sticky top-24" style="background:#12122a;border-color:rgba(255,255,255,0.08)">
+        <h3 class="font-semibold mb-5">Order Summary</h3>
+        <div class="space-y-3 text-sm mb-5">
+          <div class="flex justify-between"><span style="color:#94a3b8">E-Commerce React App</span><span>₹1,499</span></div>
+          <div class="flex justify-between"><span style="color:#94a3b8">SaaS Landing Page</span><span>₹799</span></div>
+          <div class="flex justify-between"><span style="color:#94a3b8">Portfolio Template x2</span><span>₹998</span></div>
+          <div class="border-t pt-3 mt-3 flex justify-between" style="border-color:rgba(255,255,255,0.08)">
+            <span style="color:#94a3b8">Subtotal</span><span>₹3,296</span>
+          </div>
+          <div class="flex justify-between" id="discountRow" style="display:none!important">
+            <span style="color:#10b981">Discount (20%)</span><span style="color:#10b981" id="discountAmt">-₹659</span>
+          </div>
+          <div class="flex justify-between"><span style="color:#94a3b8">Tax (GST 18%)</span><span>₹593</span></div>
+          <div class="border-t pt-3 mt-3 flex justify-between font-bold text-base" style="border-color:rgba(255,255,255,0.08)">
+            <span>Total</span><span style="color:#f97316" id="totalDisplay">₹3,889</span>
+          </div>
+        </div>
+        <button onclick="checkout()" class="w-full py-3.5 rounded-full font-semibold text-white text-sm" style="background:#f97316">Proceed to Checkout</button>
+        <div class="mt-4 flex items-center justify-center gap-2 text-xs" style="color:#94a3b8">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+          Secure 256-bit SSL payment
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer style="background:#0d0d1f;border-top:1px solid rgba(255,255,255,0.08);" class="mt-16">
+  <div class="max-w-[1280px] mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <span class="text-white font-bold">Verma <span style="color:#f97316">Digital</span> Studio</span>
+    <p class="text-sm" style="color:#94a3b8">© 2024 Verma Digital Studio. All rights reserved.</p>
+  </div>
+</footer>
+<script>
+  let discountApplied = false;
+  let qty = 2;
+
+  function removeItem(id, price) {
+    if(confirm('Remove item from cart?')) {
+      document.getElementById(id).remove();
+    }
+  }
+
+  function changeQty(change) {
+    qty = Math.max(1, qty + change);
+    document.getElementById('qty').textContent = qty;
+    document.getElementById('portfolioTotal').textContent = '₹' + (499 * qty).toLocaleString('en-IN');
+  }
+
+  function applyCoupon() {
+    const code = document.getElementById('couponInput').value.trim().toUpperCase();
+    const msg = document.getElementById('couponMsg');
+    if(code === 'VERMA20') {
+      discountApplied = true;
+      document.getElementById('discountRow').style.display = 'flex';
+      document.getElementById('discountRow').style.removeProperty('display');
+      document.getElementById('discountRow').classList.remove('hidden');
+      document.getElementById('totalDisplay').textContent = '₹3,230';
+      msg.textContent = '✓ Coupon applied! 20% discount added.';
+      msg.style.color = '#10b981';
+    } else if(code === '') {
+      msg.textContent = 'Please enter a coupon code.';
+      msg.style.color = '#ef4444';
+    } else {
+      msg.textContent = 'Invalid coupon code. Try VERMA20.';
+      msg.style.color = '#ef4444';
+    }
+  }
+
+  function checkout() {
+    alert('Redirecting to payment gateway...');
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing - Verma Digital Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{dark:"#0a0a14",surface:"#12122a"},fontFamily:{poppins:["Poppins","sans-serif"]}}}}</script>
+  <style>body{background-color:#0a0a14;font-family:"Poppins",sans-serif;color:#f1f5f9}::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:#0a0a14}::-webkit-scrollbar-thumb{background:#8b5cf6;border-radius:3px}</style>
+</head>
+<body>
+<nav style="background:#0d0d1f;border-bottom:1px solid rgba(255,255,255,0.08);" class="sticky top-0 z-50">
+  <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background:linear-gradient(135deg,#f97316,#8b5cf6)">
+          <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2zm0 14a6 6 0 110-12 6 6 0 010 12z"/></svg>
+        </div>
+        <span class="text-white font-bold text-lg">Verma <span style="color:#f97316">Digital</span> Studio</span>
+      </a>
+      <div class="hidden md:flex items-center gap-6">
+        <a href="index.html" class="text-sm" style="color:#94a3b8">Home</a>
+        <a href="products.html" class="text-sm" style="color:#94a3b8">Products</a>
+        <a href="services.html" class="text-sm" style="color:#94a3b8">Services</a>
+        <a href="courses.html" class="text-sm" style="color:#94a3b8">Courses</a>
+        <a href="pricing.html" class="text-sm" style="color:#f97316">Pricing</a>
+        <a href="about.html" class="text-sm" style="color:#94a3b8">About</a>
+        <a href="contact.html" class="text-sm" style="color:#94a3b8">Contact</a>
+      </div>
+      <div class="hidden md:flex items-center gap-3">
+        <a href="login.html" class="text-sm px-4 py-2 rounded-full border" style="color:#f1f5f9;border-color:rgba(255,255,255,0.2)">Login</a>
+        <a href="products.html" class="text-sm px-4 py-2 rounded-full" style="background:#f97316;color:white">Buy Now</a>
+      </div>
+      <button id="mobileMenuBtn" class="md:hidden p-2" style="color:#f1f5f9">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden pb-4">
+      <a href="index.html" class="block py-2 text-sm" style="color:#94a3b8">Home</a>
+      <a href="pricing.html" class="block py-2 text-sm" style="color:#f97316">Pricing</a>
+    </div>
+  </div>
+</nav>
+<script>document.getElementById("mobileMenuBtn").addEventListener("click",function(){document.getElementById("mobileMenu").classList.toggle("hidden");});</script>
+
+<!-- Page Header -->
+<div class="py-16 text-center" style="background:linear-gradient(135deg,rgba(249,115,22,0.05),rgba(139,92,246,0.05));border-bottom:1px solid rgba(255,255,255,0.08)">
+  <div class="max-w-[1280px] mx-auto px-4">
+    <h1 class="text-4xl font-bold mb-3">Simple, Transparent <span style="color:#f97316">Pricing</span></h1>
+    <p class="text-sm" style="color:#94a3b8">Choose the plan that fits your needs. Upgrade anytime.</p>
+  </div>
+</div>
+
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+  <!-- Monthly/Yearly Toggle -->
+  <div class="flex items-center justify-center gap-4 mb-12">
+    <span class="text-sm" id="monthlyLabel" style="color:#f1f5f9;font-weight:600">Monthly</span>
+    <button onclick="toggleBilling()" id="billingToggle" class="relative w-12 h-6 rounded-full transition-colors" style="background:#12122a;border:1px solid rgba(255,255,255,0.2)">
+      <div id="toggleDot" class="absolute left-1 top-1 w-4 h-4 rounded-full transition-transform" style="background:#94a3b8;transform:translateX(0)"></div>
+    </button>
+    <span class="text-sm" id="yearlyLabel" style="color:#94a3b8">Yearly <span class="text-xs px-2 py-0.5 rounded-full" style="background:rgba(16,185,129,0.1);color:#10b981">Save 20%</span></span>
+  </div>
+
+  <!-- Pricing Cards -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+    <!-- Basic -->
+    <div class="p-8 rounded-2xl border" style="background:#12122a;border-color:rgba(255,255,255,0.08)">
+      <div class="mb-6">
+        <h3 class="text-xl font-bold mb-1">Basic</h3>
+        <p class="text-xs" style="color:#94a3b8">Perfect for individuals and small projects</p>
+      </div>
+      <div class="mb-6">
+        <div class="flex items-end gap-1">
+          <span class="text-4xl font-bold" id="basicPrice">₹999</span>
+          <span class="text-sm mb-1" style="color:#94a3b8">/mo</span>
+        </div>
+        <p class="text-xs mt-1" style="color:#94a3b8" id="basicNote">Billed monthly</p>
+      </div>
+      <a href="cart.html" class="block w-full text-center py-3 rounded-full font-semibold text-sm mb-6" style="border:1px solid #f97316;color:#f97316">Get Started</a>
+      <ul class="space-y-3">
+        <li class="flex items-center gap-2 text-sm"><svg class="w-4 h-4" style="color:#10b981" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>5 product downloads/month</li>
+        <li class="flex items-center gap-2 text-sm"><svg class="w-4 h-4" style="color:#10b981" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Access to free courses</li>
+        <li class="flex items-center gap-2 text-sm"><svg class="w-4 h-4" style="color:#10b981" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Email support</li>
+        <li class="flex items-center gap-2 text-sm" style="color:#94a3b8"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>Priority support</li>
+        <li class="flex items-center gap-2 text-sm" style="color:#94a3b8"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>Team access</li>
+      </ul>
+    </div>
+
+    <!-- Pro (Popular) -->
+    <div class="p-8 rounded-2xl relative" style="background:linear-gradient(135deg,rgba(249,115,22,0.1),rgba(139,92,246,0.1));border:2px solid #f97316">
+      <div class="absolute -top-3 left-1/2 -translate-x-1/2 text-xs px-4 py-1 rounded-full font-semibold" style="background:#f97316;color:white">MOST POPULAR</div>
+      <div class="mb-6">
+        <h3 class="text-xl font-bold mb-1" style="color:#f97316">Pro</h3>
+        <p class="text-xs" style="color:#94a3b8">Best for freelancers and growing businesses</p>
+      </div>
+      <div class="mb-6">
+        <div class="flex items-end gap-1">
+          <span class="text-4xl font-bold" style="color:#f97316" id="proPrice">₹2,499</span>
+          <span class="text-sm mb-1" style="color:#94a3b8">/mo</span>
+        </div>
+        <p class="text-xs mt-1" style="color:#94a3b8" id="proNote">Billed monthly</p>
+      </div>
+      <a href="cart.html" class="block w-full text-center py-3 rounded-full font-semibold text-sm mb-6 text-white" style="background:#f97316">Get Started</a>
+      <ul class="space-y-3">
+        <li class="flex items-center gap-2 text-sm"><svg class="w-4 h-4" style="color:#10b981" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Unlimited downloads</li>
+        <li class="flex items-center gap-2 text-sm"><svg class="w-4 h-4" style="color:#10b981" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>All courses included</li>
+        <li class="flex items-center gap-2 text-sm"><svg class="w-4 h-4" style="color:#10b981" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Priority support</li>
+        <li class="flex items-center gap-2 text-sm"><svg class="w-4 h-4" style="color:#10b981" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Source code access</li>
+        <li class="flex items-center gap-2 text-sm" style="color:#94a3b8"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>Team access (5 seats)</li>
+      </ul>
+    </div>
+
+    <!-- Premium -->
+    <div class="p-8 rounded-2xl border" style="background:#12122a;border-color:rgba(139,92,246,0.3)">
+      <div class="mb-6">
+        <h3 class="text-xl font-bold mb-1" style="color:#8b5cf6">Premium</h3>
+        <p class="text-xs" style="color:#94a3b8">For agencies and enterprise teams</p>
+      </div>
+      <div class="mb-6">
+        <div class="flex items-end gap-1">
+          <span class="text-4xl font-bold" style="color:#8b5cf6" id="premiumPrice">₹4,999</span>
+          <span class="text-sm mb-1" style="color:#94a3b8">/mo</span>
+        </div>
+        <p class="text-xs mt-1" style="color:#94a3b8" id="premiumNote">Billed monthly</p>
+      </div>
+      <a href="cart.html" class="block w-full text-center py-3 rounded-full font-semibold text-sm mb-6" style="border:1px solid #8b5cf6;color:#8b5cf6">Get Started</a>
+      <ul class="space-y-3">
+        <li class="flex items-center gap-2 text-sm"><svg class="w-4 h-4" style="color:#10b981" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Everything in Pro</li>
+        <li class="flex items-center gap-2 text-sm"><svg class="w-4 h-4" style="color:#10b981" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Team access (unlimited)</li>
+        <li class="flex items-center gap-2 text-sm"><svg class="w-4 h-4" style="color:#10b981" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Dedicated account manager</li>
+        <li class="flex items-center gap-2 text-sm"><svg class="w-4 h-4" style="color:#10b981" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Custom development (2hr/mo)</li>
+        <li class="flex items-center gap-2 text-sm"><svg class="w-4 h-4" style="color:#10b981" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>White-label license</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Feature Comparison Table -->
+  <div class="mb-16">
+    <h2 class="text-2xl font-bold text-center mb-8">Feature <span style="color:#f97316">Comparison</span></h2>
+    <div class="rounded-2xl overflow-hidden border" style="border-color:rgba(255,255,255,0.08)">
+      <table class="w-full text-sm">
+        <thead>
+          <tr style="background:#12122a;border-bottom:1px solid rgba(255,255,255,0.08)">
+            <th class="text-left px-6 py-4">Feature</th>
+            <th class="text-center px-6 py-4">Basic</th>
+            <th class="text-center px-6 py-4" style="color:#f97316">Pro</th>
+            <th class="text-center px-6 py-4" style="color:#8b5cf6">Premium</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05)">
+            <td class="px-6 py-3.5" style="color:#94a3b8">Downloads/month</td>
+            <td class="text-center px-6 py-3.5">5</td>
+            <td class="text-center px-6 py-3.5" style="color:#f97316">Unlimited</td>
+            <td class="text-center px-6 py-3.5" style="color:#8b5cf6">Unlimited</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);background:rgba(255,255,255,0.02)">
+            <td class="px-6 py-3.5" style="color:#94a3b8">Course Access</td>
+            <td class="text-center px-6 py-3.5">Free only</td>
+            <td class="text-center px-6 py-3.5" style="color:#f97316">All courses</td>
+            <td class="text-center px-6 py-3.5" style="color:#8b5cf6">All courses</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05)">
+            <td class="px-6 py-3.5" style="color:#94a3b8">Support</td>
+            <td class="text-center px-6 py-3.5">Email</td>
+            <td class="text-center px-6 py-3.5" style="color:#f97316">Priority</td>
+            <td class="text-center px-6 py-3.5" style="color:#8b5cf6">Dedicated</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,0.05);background:rgba(255,255,255,0.02)">
+            <td class="px-6 py-3.5" style="color:#94a3b8">Team Seats</td>
+            <td class="text-center px-6 py-3.5">1</td>
+            <td class="text-center px-6 py-3.5" style="color:#f97316">5</td>
+            <td class="text-center px-6 py-3.5" style="color:#8b5cf6">Unlimited</td>
+          </tr>
+          <tr>
+            <td class="px-6 py-3.5" style="color:#94a3b8">White-label License</td>
+            <td class="text-center px-6 py-3.5">✗</td>
+            <td class="text-center px-6 py-3.5">✗</td>
+            <td class="text-center px-6 py-3.5" style="color:#8b5cf6">✓</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- FAQ Accordion -->
+  <div class="max-w-2xl mx-auto">
+    <h2 class="text-2xl font-bold text-center mb-8">Frequently Asked <span style="color:#f97316">Questions</span></h2>
+    <div class="space-y-3" id="faqContainer">
+      <div class="rounded-xl overflow-hidden" style="border:1px solid rgba(255,255,255,0.08)">
+        <button onclick="toggleFAQ(1)" class="w-full flex items-center justify-between px-5 py-4 text-sm font-medium text-left" style="background:#12122a">
+          <span>Can I cancel my subscription anytime?</span>
+          <svg id="faq-icon-1" class="w-4 h-4 transition-transform" style="color:#94a3b8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div id="faq-1" class="hidden px-5 py-4 text-sm" style="color:#94a3b8;border-top:1px solid rgba(255,255,255,0.08)">Yes, you can cancel your subscription at any time. Your access will continue until the end of your billing period.</div>
+      </div>
+      <div class="rounded-xl overflow-hidden" style="border:1px solid rgba(255,255,255,0.08)">
+        <button onclick="toggleFAQ(2)" class="w-full flex items-center justify-between px-5 py-4 text-sm font-medium text-left" style="background:#12122a">
+          <span>What payment methods do you accept?</span>
+          <svg id="faq-icon-2" class="w-4 h-4 transition-transform" style="color:#94a3b8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div id="faq-2" class="hidden px-5 py-4 text-sm" style="color:#94a3b8;border-top:1px solid rgba(255,255,255,0.08)">We accept UPI, credit/debit cards, net banking, and all major digital wallets including PhonePe, Google Pay, and Paytm.</div>
+      </div>
+      <div class="rounded-xl overflow-hidden" style="border:1px solid rgba(255,255,255,0.08)">
+        <button onclick="toggleFAQ(3)" class="w-full flex items-center justify-between px-5 py-4 text-sm font-medium text-left" style="background:#12122a">
+          <span>Do you offer refunds?</span>
+          <svg id="faq-icon-3" class="w-4 h-4 transition-transform" style="color:#94a3b8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div id="faq-3" class="hidden px-5 py-4 text-sm" style="color:#94a3b8;border-top:1px solid rgba(255,255,255,0.08)">Yes, we offer a 7-day money-back guarantee on all purchases. If you're not satisfied, contact us for a full refund.</div>
+      </div>
+      <div class="rounded-xl overflow-hidden" style="border:1px solid rgba(255,255,255,0.08)">
+        <button onclick="toggleFAQ(4)" class="w-full flex items-center justify-between px-5 py-4 text-sm font-medium text-left" style="background:#12122a">
+          <span>Can I use products for commercial projects?</span>
+          <svg id="faq-icon-4" class="w-4 h-4 transition-transform" style="color:#94a3b8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div id="faq-4" class="hidden px-5 py-4 text-sm" style="color:#94a3b8;border-top:1px solid rgba(255,255,255,0.08)">Yes, all products come with a standard commercial license. Premium plan includes white-label license for reselling.</div>
+      </div>
+      <div class="rounded-xl overflow-hidden" style="border:1px solid rgba(255,255,255,0.08)">
+        <button onclick="toggleFAQ(5)" class="w-full flex items-center justify-between px-5 py-4 text-sm font-medium text-left" style="background:#12122a">
+          <span>How do I get support after purchase?</span>
+          <svg id="faq-icon-5" class="w-4 h-4 transition-transform" style="color:#94a3b8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div id="faq-5" class="hidden px-5 py-4 text-sm" style="color:#94a3b8;border-top:1px solid rgba(255,255,255,0.08)">After purchase, you can reach us via email, WhatsApp, or the dashboard support ticket system. Pro and Premium users get priority response within 2 hours.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer style="background:#0d0d1f;border-top:1px solid rgba(255,255,255,0.08);" class="mt-20">
+  <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+      <span class="text-white font-bold">Verma <span style="color:#f97316">Digital</span> Studio</span>
+      <p class="text-sm" style="color:#94a3b8">© 2024 Verma Digital Studio. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<script>
+  let isYearly = false;
+  const prices = { basic:{monthly:'₹999',yearly:'₹799'}, pro:{monthly:'₹2,499',yearly:'₹1,999'}, premium:{monthly:'₹4,999',yearly:'₹3,999'} };
+  function toggleBilling() {
+    isYearly = !isYearly;
+    const dot = document.getElementById('toggleDot');
+    const toggle = document.getElementById('billingToggle');
+    if(isYearly) {
+      dot.style.transform='translateX(24px)'; dot.style.background='#f97316'; toggle.style.background='rgba(249,115,22,0.2)';
+      document.getElementById('monthlyLabel').style.color='#94a3b8';
+      document.getElementById('yearlyLabel').style.color='#f1f5f9'; document.getElementById('yearlyLabel').style.fontWeight='600';
+      document.getElementById('basicPrice').textContent=prices.basic.yearly;
+      document.getElementById('proPrice').textContent=prices.pro.yearly;
+      document.getElementById('premiumPrice').textContent=prices.premium.yearly;
+      document.getElementById('basicNote').textContent='Billed yearly';
+      document.getElementById('proNote').textContent='Billed yearly';
+      document.getElementById('premiumNote').textContent='Billed yearly';
+    } else {
+      dot.style.transform='translateX(0)'; dot.style.background='#94a3b8'; toggle.style.background='#12122a';
+      document.getElementById('monthlyLabel').style.color='#f1f5f9'; document.getElementById('monthlyLabel').style.fontWeight='600';
+      document.getElementById('yearlyLabel').style.color='#94a3b8'; document.getElementById('yearlyLabel').style.fontWeight='400';
+      document.getElementById('basicPrice').textContent=prices.basic.monthly;
+      document.getElementById('proPrice').textContent=prices.pro.monthly;
+      document.getElementById('premiumPrice').textContent=prices.premium.monthly;
+      document.getElementById('basicNote').textContent='Billed monthly';
+      document.getElementById('proNote').textContent='Billed monthly';
+      document.getElementById('premiumNote').textContent='Billed monthly';
+    }
+  }
+  function toggleFAQ(n) {
+    const el = document.getElementById('faq-'+n);
+    const icon = document.getElementById('faq-icon-'+n);
+    const isOpen = !el.classList.contains('hidden');
+    el.classList.toggle('hidden');
+    icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+  }
+</script>
+</body>
+</html>

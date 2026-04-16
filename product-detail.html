@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce React App - Verma Digital Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{dark:"#0a0a14",surface:"#12122a"},fontFamily:{poppins:["Poppins","sans-serif"]}}}}</script>
+  <style>body{background-color:#0a0a14;font-family:"Poppins",sans-serif;color:#f1f5f9}::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:#0a0a14}::-webkit-scrollbar-thumb{background:#8b5cf6;border-radius:3px}.tab-btn.active{color:#f97316;border-bottom:2px solid #f97316}</style>
+</head>
+<body>
+<nav style="background:#0d0d1f;border-bottom:1px solid rgba(255,255,255,0.08);" class="sticky top-0 z-50">
+  <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background:linear-gradient(135deg,#f97316,#8b5cf6)">
+          <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2zm0 14a6 6 0 110-12 6 6 0 010 12z"/></svg>
+        </div>
+        <span class="text-white font-bold text-lg">Verma <span style="color:#f97316">Digital</span> Studio</span>
+      </a>
+      <div class="hidden md:flex items-center gap-6">
+        <a href="index.html" class="text-sm" style="color:#94a3b8">Home</a>
+        <a href="products.html" class="text-sm" style="color:#f97316">Products</a>
+        <a href="services.html" class="text-sm" style="color:#94a3b8">Services</a>
+        <a href="courses.html" class="text-sm" style="color:#94a3b8">Courses</a>
+        <a href="pricing.html" class="text-sm" style="color:#94a3b8">Pricing</a>
+        <a href="about.html" class="text-sm" style="color:#94a3b8">About</a>
+        <a href="contact.html" class="text-sm" style="color:#94a3b8">Contact</a>
+      </div>
+      <div class="hidden md:flex items-center gap-3">
+        <a href="login.html" class="text-sm px-4 py-2 rounded-full border" style="color:#f1f5f9;border-color:rgba(255,255,255,0.2)">Login</a>
+        <a href="cart.html" class="text-sm px-4 py-2 rounded-full" style="background:#f97316;color:white">Cart (3)</a>
+      </div>
+      <button id="mobileMenuBtn" class="md:hidden p-2" style="color:#f1f5f9">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden pb-4">
+      <a href="index.html" class="block py-2 text-sm" style="color:#94a3b8">Home</a>
+      <a href="products.html" class="block py-2 text-sm" style="color:#f97316">Products</a>
+      <a href="services.html" class="block py-2 text-sm" style="color:#94a3b8">Services</a>
+    </div>
+  </div>
+</nav>
+<script>document.getElementById("mobileMenuBtn").addEventListener("click",function(){document.getElementById("mobileMenu").classList.toggle("hidden");});</script>
+
+<!-- Breadcrumb -->
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-5">
+  <div class="flex items-center gap-2 text-xs" style="color:#94a3b8">
+    <a href="index.html" style="color:#94a3b8">Home</a><span>/</span>
+    <a href="products.html" style="color:#94a3b8">Products</a><span>/</span>
+    <span style="color:#f97316">E-Commerce React App</span>
+  </div>
+</div>
+
+<!-- Product Detail -->
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+    <!-- Left: Thumbnail -->
+    <div>
+      <div class="rounded-2xl h-72 md:h-96 flex items-center justify-center" style="background:linear-gradient(135deg,#f97316,#dc2626)">
+        <svg class="w-28 h-28 text-white opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+      </div>
+      <div class="grid grid-cols-4 gap-3 mt-4">
+        <div class="h-16 rounded-xl" style="background:linear-gradient(135deg,#f97316,#dc2626);opacity:0.8"></div>
+        <div class="h-16 rounded-xl" style="background:linear-gradient(135deg,#dc2626,#f59e0b);opacity:0.8"></div>
+        <div class="h-16 rounded-xl" style="background:linear-gradient(135deg,#f59e0b,#f97316);opacity:0.8"></div>
+        <div class="h-16 rounded-xl flex items-center justify-center" style="background:#12122a;border:1px solid rgba(255,255,255,0.1)">
+          <span class="text-xs" style="color:#94a3b8">+3</span>
+        </div>
+      </div>
+    </div>
+    <!-- Right: Info -->
+    <div>
+      <div class="flex items-center gap-2 mb-3">
+        <span class="text-xs px-3 py-1 rounded-full" style="background:rgba(249,115,22,0.1);color:#f97316">Source Code</span>
+        <span class="text-xs px-3 py-1 rounded-full" style="background:rgba(16,185,129,0.1);color:#10b981">Best Seller</span>
+      </div>
+      <h1 class="text-2xl md:text-3xl font-bold mb-3">E-Commerce React App</h1>
+      <div class="flex items-center gap-3 mb-4">
+        <div class="flex items-center gap-1"><span style="color:#f59e0b">★★★★★</span><span class="text-sm" style="color:#94a3b8">4.8</span></div>
+        <span class="text-sm" style="color:#94a3b8">|</span>
+        <span class="text-sm" style="color:#94a3b8">247 reviews</span>
+        <span class="text-sm" style="color:#94a3b8">|</span>
+        <span class="text-sm" style="color:#94a3b8">1,200+ downloads</span>
+      </div>
+      <div class="flex items-center gap-3 mb-5">
+        <span class="text-3xl font-bold" style="color:#f97316">₹1,499</span>
+        <span class="text-lg line-through" style="color:#94a3b8">₹2,999</span>
+        <span class="text-sm px-2 py-0.5 rounded-full" style="background:rgba(16,185,129,0.1);color:#10b981">50% OFF</span>
+      </div>
+      <p class="text-sm leading-relaxed mb-5" style="color:#94a3b8">A complete full-stack e-commerce application built with React, Node.js, and MongoDB. Includes user authentication, product management, cart, payment integration, and admin dashboard.</p>
+      <div class="flex flex-wrap gap-2 mb-6">
+        <span class="text-xs px-3 py-1 rounded-full" style="background:#12122a;border:1px solid rgba(255,255,255,0.15);color:#94a3b8">React</span>
+        <span class="text-xs px-3 py-1 rounded-full" style="background:#12122a;border:1px solid rgba(255,255,255,0.15);color:#94a3b8">Node.js</span>
+        <span class="text-xs px-3 py-1 rounded-full" style="background:#12122a;border:1px solid rgba(255,255,255,0.15);color:#94a3b8">MongoDB</span>
+        <span class="text-xs px-3 py-1 rounded-full" style="background:#12122a;border:1px solid rgba(255,255,255,0.15);color:#94a3b8">Express</span>
+        <span class="text-xs px-3 py-1 rounded-full" style="background:#12122a;border:1px solid rgba(255,255,255,0.15);color:#94a3b8">Tailwind CSS</span>
+      </div>
+      <div class="flex gap-3 mb-6">
+        <a href="cart.html" class="flex-1 text-center py-3 rounded-full font-semibold text-sm" style="background:#f97316;color:white">Buy Now - ₹1,499</a>
+        <button onclick="alert('Added to cart!')" class="flex-1 py-3 rounded-full font-semibold text-sm border" style="border-color:rgba(249,115,22,0.5);color:#f97316">Add to Cart</button>
+      </div>
+      <div class="p-4 rounded-xl" style="background:#12122a;border:1px solid rgba(255,255,255,0.08)">
+        <div class="grid grid-cols-2 gap-4 text-sm">
+          <div class="flex items-center gap-2"><svg class="w-4 h-4" style="color:#10b981" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span style="color:#94a3b8">Instant Download</span></div>
+          <div class="flex items-center gap-2"><svg class="w-4 h-4" style="color:#10b981" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span style="color:#94a3b8">Free Updates</span></div>
+          <div class="flex items-center gap-2"><svg class="w-4 h-4" style="color:#10b981" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span style="color:#94a3b8">Full Source Code</span></div>
+          <div class="flex items-center gap-2"><svg class="w-4 h-4" style="color:#10b981" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span style="color:#94a3b8">24/7 Support</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="mt-12">
+    <div class="flex gap-6 border-b mb-8" style="border-color:rgba(255,255,255,0.08)">
+      <button onclick="showTab('description')" class="tab-btn active pb-3 text-sm font-medium" id="tab-description">Description</button>
+      <button onclick="showTab('requirements')" class="tab-btn pb-3 text-sm font-medium" id="tab-requirements" style="color:#94a3b8">Requirements</button>
+      <button onclick="showTab('reviews')" class="tab-btn pb-3 text-sm font-medium" id="tab-reviews" style="color:#94a3b8">Reviews (247)</button>
+    </div>
+    <div id="content-description">
+      <h3 class="font-semibold text-lg mb-4">About This Product</h3>
+      <div class="text-sm leading-relaxed space-y-3" style="color:#94a3b8">
+        <p>This comprehensive e-commerce application is built with modern technologies and follows industry best practices. It includes everything you need to launch a fully functional online store.</p>
+        <p><strong style="color:#f1f5f9">Key Features:</strong></p>
+        <ul class="list-disc list-inside space-y-1">
+          <li>User authentication with JWT tokens</li>
+          <li>Product catalog with search and filtering</li>
+          <li>Shopping cart and wishlist functionality</li>
+          <li>Razorpay payment gateway integration</li>
+          <li>Admin dashboard for product & order management</li>
+          <li>Order tracking and email notifications</li>
+          <li>Responsive design for all devices</li>
+          <li>RESTful API with comprehensive documentation</li>
+        </ul>
+      </div>
+    </div>
+    <div id="content-requirements" class="hidden">
+      <h3 class="font-semibold text-lg mb-4">System Requirements</h3>
+      <ul class="text-sm space-y-2" style="color:#94a3b8">
+        <li class="flex items-center gap-2"><svg class="w-4 h-4" style="color:#f97316" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>Node.js v16+</li>
+        <li class="flex items-center gap-2"><svg class="w-4 h-4" style="color:#f97316" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>MongoDB 5.0+</li>
+        <li class="flex items-center gap-2"><svg class="w-4 h-4" style="color:#f97316" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>npm or yarn package manager</li>
+        <li class="flex items-center gap-2"><svg class="w-4 h-4" style="color:#f97316" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>Razorpay account (for payments)</li>
+        <li class="flex items-center gap-2"><svg class="w-4 h-4" style="color:#f97316" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>Basic knowledge of React & Node.js</li>
+      </ul>
+    </div>
+    <div id="content-reviews" class="hidden">
+      <h3 class="font-semibold text-lg mb-6">Customer Reviews</h3>
+      <div class="space-y-6">
+        <div class="p-5 rounded-xl" style="background:#12122a;border:1px solid rgba(255,255,255,0.08)">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm" style="background:linear-gradient(135deg,#f97316,#8b5cf6)">AS</div>
+            <div><div class="font-medium text-sm">Arjun Sharma</div><div class="text-xs" style="color:#94a3b8">Jan 15, 2024</div></div>
+            <span class="ml-auto text-sm" style="color:#f59e0b">★★★★★</span>
+          </div>
+          <p class="text-sm" style="color:#94a3b8">Excellent code quality! Everything is well structured and documented. Saved me weeks of work. The payment integration works flawlessly.</p>
+        </div>
+        <div class="p-5 rounded-xl" style="background:#12122a;border:1px solid rgba(255,255,255,0.08)">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm" style="background:linear-gradient(135deg,#8b5cf6,#06b6d4)">PN</div>
+            <div><div class="font-medium text-sm">Pooja Nair</div><div class="text-xs" style="color:#94a3b8">Feb 2, 2024</div></div>
+            <span class="ml-auto text-sm" style="color:#f59e0b">★★★★☆</span>
+          </div>
+          <p class="text-sm" style="color:#94a3b8">Great template! Had a few questions and the support team was very responsive. Highly recommend for anyone building an e-commerce site.</p>
+        </div>
+        <div class="p-5 rounded-xl" style="background:#12122a;border:1px solid rgba(255,255,255,0.08)">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm" style="background:linear-gradient(135deg,#10b981,#f97316)">VS</div>
+            <div><div class="font-medium text-sm">Vikram Singh</div><div class="text-xs" style="color:#94a3b8">Feb 20, 2024</div></div>
+            <span class="ml-auto text-sm" style="color:#f59e0b">★★★★★</span>
+          </div>
+          <p class="text-sm" style="color:#94a3b8">Best purchase I made this year. The admin dashboard is feature-rich and the code is clean. Will buy more products from this studio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Related Products -->
+  <div class="mt-16">
+    <h2 class="text-2xl font-bold mb-8">Related <span style="color:#f97316">Products</span></h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="rounded-xl overflow-hidden border" style="background:#12122a;border-color:rgba(255,255,255,0.08)">
+        <div class="h-28" style="background:linear-gradient(135deg,#f97316,#8b5cf6)"></div>
+        <div class="p-4"><h3 class="font-semibold text-sm mb-2">Cryptocurrency Dashboard</h3><div class="flex items-center justify-between"><span class="font-bold text-sm" style="color:#f97316">₹2,499</span><a href="product-detail.html" class="text-xs px-3 py-1 rounded-full" style="background:#f97316;color:white">View</a></div></div>
+      </div>
+      <div class="rounded-xl overflow-hidden border" style="background:#12122a;border-color:rgba(255,255,255,0.08)">
+        <div class="h-28" style="background:linear-gradient(135deg,#0ea5e9,#6366f1)"></div>
+        <div class="p-4"><h3 class="font-semibold text-sm mb-2">Social Media Dashboard</h3><div class="flex items-center justify-between"><span class="font-bold text-sm" style="color:#f97316">₹1,799</span><a href="product-detail.html" class="text-xs px-3 py-1 rounded-full" style="background:#f97316;color:white">View</a></div></div>
+      </div>
+      <div class="rounded-xl overflow-hidden border" style="background:#12122a;border-color:rgba(255,255,255,0.08)">
+        <div class="h-28" style="background:linear-gradient(135deg,#10b981,#14b8a6)"></div>
+        <div class="p-4"><h3 class="font-semibold text-sm mb-2">Hotel Booking Platform</h3><div class="flex items-center justify-between"><span class="font-bold text-sm" style="color:#f97316">₹2,999</span><a href="product-detail.html" class="text-xs px-3 py-1 rounded-full" style="background:#f97316;color:white">View</a></div></div>
+      </div>
+      <div class="rounded-xl overflow-hidden border" style="background:#12122a;border-color:rgba(255,255,255,0.08)">
+        <div class="h-28" style="background:linear-gradient(135deg,#ec4899,#8b5cf6)"></div>
+        <div class="p-4"><h3 class="font-semibold text-sm mb-2">Restaurant Booking App</h3><div class="flex items-center justify-between"><span class="font-bold text-sm" style="color:#f97316">₹1,999</span><a href="product-detail.html" class="text-xs px-3 py-1 rounded-full" style="background:#f97316;color:white">View</a></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer style="background:#0d0d1f;border-top:1px solid rgba(255,255,255,0.08);" class="mt-10">
+  <div class="max-w-[1280px] mx-auto px-4 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <span class="text-white font-bold">Verma <span style="color:#f97316">Digital</span> Studio</span>
+    <p class="text-sm" style="color:#94a3b8">© 2024 Verma Digital Studio. All rights reserved.</p>
+  </div>
+</footer>
+<script>
+  function showTab(tab) {
+    ['description','requirements','reviews'].forEach(t => {
+      document.getElementById('content-'+t).classList.add('hidden');
+      const btn = document.getElementById('tab-'+t);
+      btn.classList.remove('active'); btn.style.color='#94a3b8'; btn.style.borderBottom='none';
+    });
+    document.getElementById('content-'+tab).classList.remove('hidden');
+    const activeBtn = document.getElementById('tab-'+tab);
+    activeBtn.classList.add('active'); activeBtn.style.color='#f97316'; activeBtn.style.borderBottom='2px solid #f97316';
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses - Verma Digital Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{dark:"#0a0a14",surface:"#12122a"},fontFamily:{poppins:["Poppins","sans-serif"]}}}}</script>
+  <style>body{background-color:#0a0a14;font-family:"Poppins",sans-serif;color:#f1f5f9}::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:#0a0a14}::-webkit-scrollbar-thumb{background:#8b5cf6;border-radius:3px}.filter-btn.active{background:#f97316;color:white}</style>
+</head>
+<body>
+<nav style="background:#0d0d1f;border-bottom:1px solid rgba(255,255,255,0.08);" class="sticky top-0 z-50">
+  <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background:linear-gradient(135deg,#f97316,#8b5cf6)">
+          <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2zm0 14a6 6 0 110-12 6 6 0 010 12z"/></svg>
+        </div>
+        <span class="text-white font-bold text-lg">Verma <span style="color:#f97316">Digital</span> Studio</span>
+      </a>
+      <div class="hidden md:flex items-center gap-6">
+        <a href="index.html" class="text-sm" style="color:#94a3b8">Home</a>
+        <a href="products.html" class="text-sm" style="color:#94a3b8">Products</a>
+        <a href="services.html" class="text-sm" style="color:#94a3b8">Services</a>
+        <a href="courses.html" class="text-sm" style="color:#f97316">Courses</a>
+        <a href="pricing.html" class="text-sm" style="color:#94a3b8">Pricing</a>
+        <a href="about.html" class="text-sm" style="color:#94a3b8">About</a>
+        <a href="contact.html" class="text-sm" style="color:#94a3b8">Contact</a>
+      </div>
+      <div class="hidden md:flex items-center gap-3">
+        <a href="login.html" class="text-sm px-4 py-2 rounded-full border" style="color:#f1f5f9;border-color:rgba(255,255,255,0.2)">Login</a>
+        <a href="products.html" class="text-sm px-4 py-2 rounded-full" style="background:#f97316;color:white">Buy Now</a>
+      </div>
+      <button id="mobileMenuBtn" class="md:hidden p-2" style="color:#f1f5f9">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden pb-4">
+      <a href="index.html" class="block py-2 text-sm" style="color:#94a3b8">Home</a>
+      <a href="courses.html" class="block py-2 text-sm" style="color:#f97316">Courses</a>
+    </div>
+  </div>
+</nav>
+<script>document.getElementById("mobileMenuBtn").addEventListener("click",function(){document.getElementById("mobileMenu").classList.toggle("hidden");});</script>
+
+<!-- Coming Soon Banner -->
+<div class="py-2.5 text-center text-xs font-medium" style="background:linear-gradient(135deg,rgba(249,115,22,0.2),rgba(139,92,246,0.2));border-bottom:1px solid rgba(255,255,255,0.08)">
+  🚀 <span style="color:#f97316">New courses launching soon!</span> <span style="color:#94a3b8">Enroll early and get 30% off.</span>
+</div>
+
+<!-- Page Header -->
+<div class="py-16 text-center" style="background:linear-gradient(135deg,rgba(249,115,22,0.05),rgba(139,92,246,0.05));border-bottom:1px solid rgba(255,255,255,0.08)">
+  <div class="max-w-[1280px] mx-auto px-4">
+    <div class="flex items-center justify-center gap-2 text-xs mb-3" style="color:#94a3b8">
+      <a href="index.html" style="color:#94a3b8">Home</a><span>/</span><span style="color:#f97316">Courses</span>
+    </div>
+    <h1 class="text-4xl font-bold mb-3">Learn from <span style="color:#f97316">Experts</span></h1>
+    <p class="text-sm max-w-xl mx-auto" style="color:#94a3b8">Master web development and design with our comprehensive courses</p>
+  </div>
+</div>
+
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
+  <!-- Filter Tabs -->
+  <div class="flex gap-3 mb-8 flex-wrap">
+    <button onclick="filterCourses('all')" class="filter-btn active text-xs px-5 py-2 rounded-full border" style="border-color:rgba(255,255,255,0.15)" data-type="all">All Courses</button>
+    <button onclick="filterCourses('free')" class="filter-btn text-xs px-5 py-2 rounded-full border" style="color:#94a3b8;border-color:rgba(255,255,255,0.15)" data-type="free">Free</button>
+    <button onclick="filterCourses('paid')" class="filter-btn text-xs px-5 py-2 rounded-full border" style="color:#94a3b8;border-color:rgba(255,255,255,0.15)" data-type="paid">Paid</button>
+  </div>
+
+  <!-- Course Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Course 1: HTML & CSS Mastery (Free) -->
+    <div class="course-card rounded-xl overflow-hidden border transition-all hover:scale-[1.02]" style="background:#12122a;border-color:rgba(255,255,255,0.08)" data-type="free">
+      <div class="h-44 flex items-center justify-center relative" style="background:linear-gradient(135deg,#f97316,#dc2626)">
+        <svg class="w-16 h-16 text-white opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+        <span class="absolute top-3 right-3 text-xs px-2.5 py-1 rounded-full font-semibold" style="background:#10b981;color:white">FREE</span>
+      </div>
+      <div class="p-5">
+        <h3 class="font-semibold mb-2">HTML &amp; CSS Mastery</h3>
+        <p class="text-xs mb-3" style="color:#94a3b8">Learn the fundamentals of web development with HTML5 and CSS3. Build beautiful, responsive websites from scratch.</p>
+        <div class="flex items-center gap-4 text-xs mb-4" style="color:#94a3b8">
+          <span>👨‍🏫 Rahul Verma</span><span>⏱ 8 hrs</span><span>📚 24 lessons</span>
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="font-bold" style="color:#10b981">Free</span>
+          <button onclick="alert('Enrolled! Check your dashboard.')" class="text-xs px-4 py-2 rounded-full font-medium" style="background:#f97316;color:white">Enroll Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Course 2: React.js Complete Guide -->
+    <div class="course-card rounded-xl overflow-hidden border transition-all hover:scale-[1.02]" style="background:#12122a;border-color:rgba(255,255,255,0.08)" data-type="paid">
+      <div class="h-44 flex items-center justify-center relative" style="background:linear-gradient(135deg,#06b6d4,#3b82f6)">
+        <svg class="w-16 h-16 text-white opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+        <span class="absolute top-3 right-3 text-xs px-2.5 py-1 rounded-full font-semibold" style="background:#f97316;color:white">PAID</span>
+      </div>
+      <div class="p-5">
+        <h3 class="font-semibold mb-2">React.js Complete Guide</h3>
+        <p class="text-xs mb-3" style="color:#94a3b8">Master React.js from basics to advanced. Hooks, Redux, API integration, and real-world projects included.</p>
+        <div class="flex items-center gap-4 text-xs mb-4" style="color:#94a3b8">
+          <span>👨‍🏫 Amit Kumar</span><span>⏱ 15 hrs</span><span>📚 48 lessons</span>
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="font-bold" style="color:#f97316">₹999</span>
+          <button onclick="alert('Redirecting to payment...')" class="text-xs px-4 py-2 rounded-full font-medium" style="background:#f97316;color:white">Enroll Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Course 3: UI/UX Design Fundamentals -->
+    <div class="course-card rounded-xl overflow-hidden border transition-all hover:scale-[1.02]" style="background:#12122a;border-color:rgba(255,255,255,0.08)" data-type="paid">
+      <div class="h-44 flex items-center justify-center relative" style="background:linear-gradient(135deg,#8b5cf6,#6366f1)">
+        <svg class="w-16 h-16 text-white opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>
+        <span class="absolute top-3 right-3 text-xs px-2.5 py-1 rounded-full font-semibold" style="background:#f97316;color:white">PAID</span>
+      </div>
+      <div class="p-5">
+        <h3 class="font-semibold mb-2">UI/UX Design Fundamentals</h3>
+        <p class="text-xs mb-3" style="color:#94a3b8">Learn design principles, user research, wireframing, and prototyping with Figma. Create stunning interfaces.</p>
+        <div class="flex items-center gap-4 text-xs mb-4" style="color:#94a3b8">
+          <span>👩‍🏫 Sneha Patel</span><span>⏱ 12 hrs</span><span>📚 36 lessons</span>
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="font-bold" style="color:#f97316">₹799</span>
+          <button onclick="alert('Redirecting to payment...')" class="text-xs px-4 py-2 rounded-full font-medium" style="background:#f97316;color:white">Enroll Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Course 4: Node.js & Express Backend -->
+    <div class="course-card rounded-xl overflow-hidden border transition-all hover:scale-[1.02]" style="background:#12122a;border-color:rgba(255,255,255,0.08)" data-type="paid">
+      <div class="h-44 flex items-center justify-center relative" style="background:linear-gradient(135deg,#10b981,#059669)">
+        <svg class="w-16 h-16 text-white opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/></svg>
+        <span class="absolute top-3 right-3 text-xs px-2.5 py-1 rounded-full font-semibold" style="background:#f97316;color:white">PAID</span>
+      </div>
+      <div class="p-5">
+        <h3 class="font-semibold mb-2">Node.js &amp; Express Backend</h3>
+        <p class="text-xs mb-3" style="color:#94a3b8">Build scalable backend APIs with Node.js, Express, and MongoDB. JWT auth, file uploads, and deployment.</p>
+        <div class="flex items-center gap-4 text-xs mb-4" style="color:#94a3b8">
+          <span>👨‍🏫 Amit Kumar</span><span>⏱ 18 hrs</span><span>📚 54 lessons</span>
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="font-bold" style="color:#f97316">₹1,299</span>
+          <button onclick="alert('Redirecting to payment...')" class="text-xs px-4 py-2 rounded-full font-medium" style="background:#f97316;color:white">Enroll Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Course 5: Figma for Web Designers (Free) -->
+    <div class="course-card rounded-xl overflow-hidden border transition-all hover:scale-[1.02]" style="background:#12122a;border-color:rgba(255,255,255,0.08)" data-type="free">
+      <div class="h-44 flex items-center justify-center relative" style="background:linear-gradient(135deg,#ec4899,#8b5cf6)">
+        <svg class="w-16 h-16 text-white opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
+        <span class="absolute top-3 right-3 text-xs px-2.5 py-1 rounded-full font-semibold" style="background:#10b981;color:white">FREE</span>
+      </div>
+      <div class="p-5">
+        <h3 class="font-semibold mb-2">Figma for Web Designers</h3>
+        <p class="text-xs mb-3" style="color:#94a3b8">Master Figma from scratch. Learn auto-layout, components, prototyping, and collaboration features.</p>
+        <div class="flex items-center gap-4 text-xs mb-4" style="color:#94a3b8">
+          <span>👩‍🏫 Sneha Patel</span><span>⏱ 6 hrs</span><span>📚 18 lessons</span>
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="font-bold" style="color:#10b981">Free</span>
+          <button onclick="alert('Enrolled! Check your dashboard.')" class="text-xs px-4 py-2 rounded-full font-medium" style="background:#f97316;color:white">Enroll Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Course 6: Full Stack Web Development -->
+    <div class="course-card rounded-xl overflow-hidden border transition-all hover:scale-[1.02]" style="background:#12122a;border-color:rgba(255,255,255,0.08)" data-type="paid">
+      <div class="h-44 flex items-center justify-center relative" style="background:linear-gradient(135deg,#f59e0b,#f97316)">
+        <svg class="w-16 h-16 text-white opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        <span class="absolute top-3 right-3 text-xs px-2.5 py-1 rounded-full font-semibold" style="background:#8b5cf6;color:white">BESTSELLER</span>
+      </div>
+      <div class="p-5">
+        <h3 class="font-semibold mb-2">Full Stack Web Development</h3>
+        <p class="text-xs mb-3" style="color:#94a3b8">The ultimate guide to becoming a full stack developer. HTML to React, Node.js to deployment. 10 real projects.</p>
+        <div class="flex items-center gap-4 text-xs mb-4" style="color:#94a3b8">
+          <span>👨‍🏫 Rahul Verma</span><span>⏱ 40 hrs</span><span>📚 120 lessons</span>
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="font-bold" style="color:#f97316">₹2,499</span>
+          <button onclick="alert('Redirecting to payment...')" class="text-xs px-4 py-2 rounded-full font-medium" style="background:#f97316;color:white">Enroll Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <div class="mt-16 rounded-2xl p-10 text-center" style="background:linear-gradient(135deg,rgba(249,115,22,0.1),rgba(139,92,246,0.1));border:1px solid rgba(255,255,255,0.08)">
+    <h2 class="text-2xl font-bold mb-3">Want to Learn <span style="color:#f97316">More?</span></h2>
+    <p class="text-sm mb-6" style="color:#94a3b8">Get access to all courses with our Pro plan. Save 60% with annual subscription.</p>
+    <div class="flex gap-4 justify-center flex-wrap">
+      <a href="pricing.html" class="px-8 py-3 rounded-full font-semibold text-sm text-white" style="background:#f97316">View Pricing Plans</a>
+      <a href="contact.html" class="px-8 py-3 rounded-full font-semibold text-sm" style="border:1px solid rgba(255,255,255,0.2);color:#f1f5f9">Contact Us</a>
+    </div>
+  </div>
+</div>
+
+<footer style="background:#0d0d1f;border-top:1px solid rgba(255,255,255,0.08);" class="mt-16">
+  <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+      <span class="text-white font-bold">Verma <span style="color:#f97316">Digital</span> Studio</span>
+      <p class="text-sm" style="color:#94a3b8">© 2024 Verma Digital Studio. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<script>
+  function filterCourses(type) {
+    document.querySelectorAll('.filter-btn').forEach(b=>{b.classList.remove('active');b.style.color='#94a3b8';});
+    event.target.classList.add('active'); event.target.style.color='white';
+    document.querySelectorAll('.course-card').forEach(c=>{
+      if(type==='all'||c.dataset.type===type) c.style.display=''; else c.style.display='none';
+    });
+  }
+</script>
+</body>
+</html>

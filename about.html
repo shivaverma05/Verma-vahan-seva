@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Verma Digital Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{dark:"#0a0a14",surface:"#12122a"},fontFamily:{poppins:["Poppins","sans-serif"]}}}}</script>
+  <style>body{background-color:#0a0a14;font-family:"Poppins",sans-serif;color:#f1f5f9}::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:#0a0a14}::-webkit-scrollbar-thumb{background:#8b5cf6;border-radius:3px}</style>
+</head>
+<body>
+<nav style="background:#0d0d1f;border-bottom:1px solid rgba(255,255,255,0.08);" class="sticky top-0 z-50">
+  <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background:linear-gradient(135deg,#f97316,#8b5cf6)">
+          <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2zm0 14a6 6 0 110-12 6 6 0 010 12z"/></svg>
+        </div>
+        <span class="text-white font-bold text-lg">Verma <span style="color:#f97316">Digital</span> Studio</span>
+      </a>
+      <div class="hidden md:flex items-center gap-6">
+        <a href="index.html" class="text-sm" style="color:#94a3b8">Home</a>
+        <a href="products.html" class="text-sm" style="color:#94a3b8">Products</a>
+        <a href="services.html" class="text-sm" style="color:#94a3b8">Services</a>
+        <a href="courses.html" class="text-sm" style="color:#94a3b8">Courses</a>
+        <a href="pricing.html" class="text-sm" style="color:#94a3b8">Pricing</a>
+        <a href="about.html" class="text-sm" style="color:#f97316">About</a>
+        <a href="contact.html" class="text-sm" style="color:#94a3b8">Contact</a>
+      </div>
+      <div class="hidden md:flex items-center gap-3">
+        <a href="login.html" class="text-sm px-4 py-2 rounded-full border" style="color:#f1f5f9;border-color:rgba(255,255,255,0.2)">Login</a>
+        <a href="products.html" class="text-sm px-4 py-2 rounded-full" style="background:#f97316;color:white">Buy Now</a>
+      </div>
+      <button id="mobileMenuBtn" class="md:hidden p-2" style="color:#f1f5f9">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden pb-4">
+      <a href="index.html" class="block py-2 text-sm" style="color:#94a3b8">Home</a>
+      <a href="about.html" class="block py-2 text-sm" style="color:#f97316">About</a>
+    </div>
+  </div>
+</nav>
+<script>document.getElementById("mobileMenuBtn").addEventListener("click",function(){document.getElementById("mobileMenu").classList.toggle("hidden");});</script>
+
+<!-- Hero -->
+<section class="relative py-24 text-center overflow-hidden">
+  <div class="absolute inset-0" style="background:radial-gradient(ellipse at 50% 0%,rgba(249,115,22,0.1) 0%,transparent 60%)"></div>
+  <div class="relative max-w-[1280px] mx-auto px-4">
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs mb-6" style="background:rgba(249,115,22,0.1);border:1px solid rgba(249,115,22,0.3);color:#f97316">
+      🚀 Founded in 2021, Serving Thousands
+    </div>
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-6">We Build <span style="background:linear-gradient(135deg,#f97316,#8b5cf6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Digital Dreams</span></h1>
+    <p class="text-sm md:text-base max-w-2xl mx-auto" style="color:#94a3b8">Verma Digital Studio is India's premier digital marketplace for developers, designers, and entrepreneurs. We create and curate premium digital products that help you build faster.</p>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="py-10" style="background:#12122a;border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08)">
+  <div class="max-w-[1280px] mx-auto px-4">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div><div class="text-3xl font-bold" style="color:#f97316">3+</div><div class="text-sm mt-1" style="color:#94a3b8">Years of Excellence</div></div>
+      <div><div class="text-3xl font-bold" style="color:#8b5cf6">2800+</div><div class="text-sm mt-1" style="color:#94a3b8">Happy Customers</div></div>
+      <div><div class="text-3xl font-bold" style="color:#f97316">500+</div><div class="text-sm mt-1" style="color:#94a3b8">Premium Products</div></div>
+      <div><div class="text-3xl font-bold" style="color:#8b5cf6">4.9/5</div><div class="text-sm mt-1" style="color:#94a3b8">Average Rating</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Story -->
+<section class="py-16 max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div class="h-72 rounded-2xl flex items-center justify-center" style="background:linear-gradient(135deg,rgba(249,115,22,0.1),rgba(139,92,246,0.1));border:1px solid rgba(255,255,255,0.08)">
+      <div class="text-center">
+        <div class="text-6xl mb-4">🚀</div>
+        <div class="text-lg font-bold" style="color:#f97316">Est. 2021</div>
+        <div class="text-sm" style="color:#94a3b8">New Delhi, India</div>
+      </div>
+    </div>
+    <div>
+      <h2 class="text-3xl font-bold mb-5">Our <span style="color:#f97316">Story</span></h2>
+      <div class="space-y-4 text-sm leading-relaxed" style="color:#94a3b8">
+        <p>Verma Digital Studio was founded in 2021 by Rahul Verma, a full-stack developer with a passion for making quality digital tools accessible to everyone in India.</p>
+        <p>What started as a small side project selling HTML templates has grown into a thriving marketplace with 500+ products, 2800+ customers, and a team of talented developers and designers.</p>
+        <p>Our mission is simple: provide Indian developers, entrepreneurs, and businesses with premium digital products at affordable prices, backed by world-class support.</p>
+        <p>Today, Verma Digital Studio is trusted by freelancers, startups, and enterprises across India and beyond to power their digital projects.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Team -->
+<section class="py-16" style="background:#12122a;border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08)">
+  <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold mb-3">Meet Our <span style="color:#f97316">Team</span></h2>
+      <p class="text-sm" style="color:#94a3b8">The talented people behind Verma Digital Studio</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="p-6 rounded-xl text-center" style="background:#0a0a14;border:1px solid rgba(255,255,255,0.08)">
+        <div class="w-20 h-20 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4" style="background:linear-gradient(135deg,#f97316,#8b5cf6)">RV</div>
+        <h3 class="font-semibold">Rahul Verma</h3>
+        <p class="text-xs mt-1 mb-3" style="color:#f97316">Founder &amp; CEO</p>
+        <p class="text-xs" style="color:#94a3b8">Full-stack developer with 8+ years of experience. Expert in React, Node.js, and cloud architecture.</p>
+      </div>
+      <div class="p-6 rounded-xl text-center" style="background:#0a0a14;border:1px solid rgba(255,255,255,0.08)">
+        <div class="w-20 h-20 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4" style="background:linear-gradient(135deg,#ec4899,#8b5cf6)">PS</div>
+        <h3 class="font-semibold">Priya Sharma</h3>
+        <p class="text-xs mt-1 mb-3" style="color:#ec4899">Lead Designer</p>
+        <p class="text-xs" style="color:#94a3b8">Award-winning designer specializing in brand identity and digital product design with 6+ years experience.</p>
+      </div>
+      <div class="p-6 rounded-xl text-center" style="background:#0a0a14;border:1px solid rgba(255,255,255,0.08)">
+        <div class="w-20 h-20 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4" style="background:linear-gradient(135deg,#06b6d4,#3b82f6)">AK</div>
+        <h3 class="font-semibold">Amit Kumar</h3>
+        <p class="text-xs mt-1 mb-3" style="color:#06b6d4">Full Stack Developer</p>
+        <p class="text-xs" style="color:#94a3b8">Backend specialist with expertise in Python, Django, Java Spring Boot, and database optimization.</p>
+      </div>
+      <div class="p-6 rounded-xl text-center" style="background:#0a0a14;border:1px solid rgba(255,255,255,0.08)">
+        <div class="w-20 h-20 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4" style="background:linear-gradient(135deg,#10b981,#06b6d4)">SP</div>
+        <h3 class="font-semibold">Sneha Patel</h3>
+        <p class="text-xs mt-1 mb-3" style="color:#10b981">UI/UX Designer</p>
+        <p class="text-xs" style="color:#94a3b8">Figma expert and UX researcher focused on creating intuitive, accessible, and delightful user experiences.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tech Stack -->
+<section class="py-16 max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="text-center mb-10">
+    <h2 class="text-3xl font-bold mb-3">Tools &amp; <span style="color:#f97316">Technologies</span></h2>
+    <p class="text-sm" style="color:#94a3b8">The stack powering our products</p>
+  </div>
+  <div class="flex flex-wrap gap-3 justify-center">
+    <span class="px-4 py-2 rounded-full text-sm" style="background:#12122a;border:1px solid rgba(255,255,255,0.1);color:#94a3b8">React.js</span>
+    <span class="px-4 py-2 rounded-full text-sm" style="background:#12122a;border:1px solid rgba(255,255,255,0.1);color:#94a3b8">Node.js</span>
+    <span class="px-4 py-2 rounded-full text-sm" style="background:#12122a;border:1px solid rgba(255,255,255,0.1);color:#94a3b8">Python / Django</span>
+    <span class="px-4 py-2 rounded-full text-sm" style="background:#12122a;border:1px solid rgba(255,255,255,0.1);color:#94a3b8">Next.js</span>
+    <span class="px-4 py-2 rounded-full text-sm" style="background:#12122a;border:1px solid rgba(255,255,255,0.1);color:#94a3b8">PHP / Laravel</span>
+    <span class="px-4 py-2 rounded-full text-sm" style="background:#12122a;border:1px solid rgba(255,255,255,0.1);color:#94a3b8">Vue.js</span>
+    <span class="px-4 py-2 rounded-full text-sm" style="background:#12122a;border:1px solid rgba(255,255,255,0.1);color:#94a3b8">MongoDB</span>
+    <span class="px-4 py-2 rounded-full text-sm" style="background:#12122a;border:1px solid rgba(255,255,255,0.1);color:#94a3b8">PostgreSQL</span>
+    <span class="px-4 py-2 rounded-full text-sm" style="background:#12122a;border:1px solid rgba(255,255,255,0.1);color:#94a3b8">Tailwind CSS</span>
+    <span class="px-4 py-2 rounded-full text-sm" style="background:#12122a;border:1px solid rgba(255,255,255,0.1);color:#94a3b8">Figma</span>
+    <span class="px-4 py-2 rounded-full text-sm" style="background:#12122a;border:1px solid rgba(255,255,255,0.1);color:#94a3b8">Adobe XD</span>
+    <span class="px-4 py-2 rounded-full text-sm" style="background:#12122a;border:1px solid rgba(255,255,255,0.1);color:#94a3b8">Java / Spring Boot</span>
+  </div>
+</section>
+
+<!-- Values -->
+<section class="py-16" style="background:#12122a;border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08)">
+  <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold mb-3">Our <span style="color:#f97316">Values</span></h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="p-6 rounded-xl" style="background:#0a0a14;border:1px solid rgba(255,255,255,0.08)">
+        <div class="text-3xl mb-4">🎯</div>
+        <h3 class="font-semibold mb-2">Quality First</h3>
+        <p class="text-xs" style="color:#94a3b8">Every product we release meets our strict quality standards. We test, review, and refine before publishing.</p>
+      </div>
+      <div class="p-6 rounded-xl" style="background:#0a0a14;border:1px solid rgba(255,255,255,0.08)">
+        <div class="text-3xl mb-4">🤝</div>
+        <h3 class="font-semibold mb-2">Customer Trust</h3>
+        <p class="text-xs" style="color:#94a3b8">We build long-term relationships with our customers through transparency, reliability, and exceptional support.</p>
+      </div>
+      <div class="p-6 rounded-xl" style="background:#0a0a14;border:1px solid rgba(255,255,255,0.08)">
+        <div class="text-3xl mb-4">��</div>
+        <h3 class="font-semibold mb-2">Innovation</h3>
+        <p class="text-xs" style="color:#94a3b8">We stay ahead of the curve, continuously learning and incorporating the latest technologies and design trends.</p>
+      </div>
+      <div class="p-6 rounded-xl" style="background:#0a0a14;border:1px solid rgba(255,255,255,0.08)">
+        <div class="text-3xl mb-4">🇮🇳</div>
+        <h3 class="font-semibold mb-2">Made for India</h3>
+        <p class="text-xs" style="color:#94a3b8">Affordable pricing in INR, UPI support, Indian use cases — built specifically for the Indian developer ecosystem.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-16 max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+  <h2 class="text-3xl font-bold mb-4">Ready to Build <span style="color:#f97316">Something Great?</span></h2>
+  <p class="text-sm mb-8" style="color:#94a3b8">Join 2800+ developers and businesses who trust Verma Digital Studio</p>
+  <div class="flex gap-4 justify-center flex-wrap">
+    <a href="products.html" class="px-8 py-3.5 rounded-full font-semibold text-sm text-white" style="background:#f97316">Browse Products</a>
+    <a href="contact.html" class="px-8 py-3.5 rounded-full font-semibold text-sm" style="border:1px solid rgba(255,255,255,0.2);color:#f1f5f9">Contact Us</a>
+  </div>
+</section>
+
+<footer style="background:#0d0d1f;border-top:1px solid rgba(255,255,255,0.08);">
+  <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <span class="text-white font-bold">Verma <span style="color:#f97316">Digital</span> Studio</span>
+    <p class="text-sm" style="color:#94a3b8">© 2024 Verma Digital Studio. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

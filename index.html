@@ -1,322 +1,422 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-     <link rel="icon" type="image/x-icon" href="WhatsApp Image 2025-09-22 at 07.34.31_77baff7a.jpg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verma Vahan Seva Booking</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Font - Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f0f4f8;
-            color: #334155;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Verma Digital Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { dark: '#0a0a14', surface: '#12122a', navbar: '#0d0d1f', orange: '#f97316', purple: '#8b5cf6' },
+          fontFamily: { poppins: ['Poppins', 'sans-serif'] },
+          maxWidth: { container: '1280px' }
         }
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 1rem;
-        }
-        .header-logo {
-            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
-        }
-        .card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        .section-title {
-            position: relative;
-            display: inline-block;
-            padding-bottom: 0.5rem;
-        }
-        .section-title::after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            bottom: 0;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 4px;
-            background-color: #38a169; /* Green color */
-            border-radius: 9999px;
-        }
-        .box{
-            height: 50px;
-            width: 50px;
-            background-color:whitesmoke;
-            border-radius: 50%;
-            border: 1px solid black;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: black;
-            box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.644) inset;
-            
-        }
-        .box:hover{
-            background-color: black;
-            color: white;
-            transform: scale(1.1);
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-    </style>
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #0a0a14; font-family: 'Poppins', sans-serif; color: #f1f5f9; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0a0a14; }
+    ::-webkit-scrollbar-thumb { background: #8b5cf6; border-radius: 3px; }
+  </style>
 </head>
-<body class="bg-gray-50">
-
-    <!-- Header Section -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <!-- Logo with Car and Tractor icons -->
-                <div class="header-logo flex items-center">
-                    <img src="WhatsApp Image 2025-09-22 at 07.34.31_77baff7a.jpg" alt="Logo" class="rounded-full w-12 h-12">
-                    <span class="text-2xl font-bold text-gray-800 ml-2">Verma Vahan Seva</span>
-                </div>
-            </div>
-            <nav class="hidden md:flex items-center space-x-6">
-                <a href="#services" class="text-gray-600 hover:text-green-600 transition duration-300 font-medium">Services</a>
-                <a href="#about" class="text-gray-600 hover:text-green-600 transition duration-300 font-medium">About Us</a>
-                <a href="#contact" class="text-gray-600 hover:text-green-600 transition duration-300 font-medium">Contact</a>
-                 <a href="photo.html" class="text-gray-600 hover:text-green-600 transition duration-300 font-medium">Picture Gallery</a>
-                <button id="bookNowBtn" class="bg-green-500 text-white font-semibold py-2 px-6 rounded-full shadow-lg hover:bg-green-600 transition duration-300">Book Now</button>
-            </nav>
-            <div class="md:hidden">
-                <button id="mobile-menu-btn" class="text-gray-600 hover:text-green-600 focus:outline-none">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
-            </div>
+<body>
+<nav style="background:#0d0d1f;border-bottom:1px solid rgba(255,255,255,0.08);" class="sticky top-0 z-50">
+  <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background:linear-gradient(135deg,#f97316,#8b5cf6)">
+          <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2zm0 14a6 6 0 110-12 6 6 0 010 12z"/></svg>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
-            <a href="#services" class="block py-3 px-6 text-gray-600 hover:bg-gray-100 font-medium">Services</a>
-            <a href="#about" class="block py-3 px-6 text-gray-600 hover:bg-gray-100 font-medium">About Us</a>
-            <a href="#contact" class="block py-3 px-6 text-gray-600 hover:bg-gray-100 font-medium">Contact</a>
-            <a href="photo.html" class="block py-3 px-6 text-gray-600 hover:bg-gray-100 font-medium">Picture Gallery</a>
-            <button id="mobileBookBtn" class="w-full bg-green-500 text-white font-semibold py-3 px-6 rounded-b-lg hover:bg-green-600 transition duration-300">Book Now</button>
+        <span class="text-white font-bold text-lg">Verma <span style="color:#f97316">Digital</span> Studio</span>
+      </a>
+      <div class="hidden md:flex items-center gap-6">
+        <a href="index.html" class="text-sm font-medium" style="color:#f97316">Home</a>
+        <div class="relative group">
+          <button class="flex items-center gap-1 text-sm font-medium" style="color:#94a3b8">Products<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+          <div class="absolute top-full left-0 mt-2 w-48 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50" style="background:#12122a;border:1px solid rgba(255,255,255,0.08)">
+            <a href="products.html?cat=source-code" class="block px-4 py-2.5 text-sm hover:text-orange-400" style="color:#94a3b8">Source Code</a>
+            <a href="products.html?cat=static" class="block px-4 py-2.5 text-sm hover:text-orange-400" style="color:#94a3b8">Static Websites</a>
+            <a href="products.html?cat=dynamic" class="block px-4 py-2.5 text-sm hover:text-orange-400" style="color:#94a3b8">Dynamic Websites</a>
+            <a href="products.html?cat=landing" class="block px-4 py-2.5 text-sm hover:text-orange-400" style="color:#94a3b8">Landing Pages</a>
+            <a href="products.html?cat=software" class="block px-4 py-2.5 text-sm hover:text-orange-400" style="color:#94a3b8">Software</a>
+          </div>
         </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="bg-gray-100 py-16 sm:py-24 text-center">
-        <div class="container mx-auto px-4">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-4 animate-fadeIn">
-                Your Journey, Your Field, Our Service
-            </h1>
-            <p class="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto animate-fadeIn delay-200">
-                Reliable Car Rentals & Professional Tractor Services for all your needs.
-            </p>
-              <p class="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto animate-fadeIn delay-200">
-               This service available only on sultanpur district.
-            </p>
-            
-            <button id="ctaBtn" class="bg-green-500 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-green-600 transition duration-300 transform hover:scale-105 animate-bounce-in">
-                Book Your Service
-            </button>
+        <div class="relative group">
+          <button class="flex items-center gap-1 text-sm font-medium" style="color:#94a3b8">Services<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+          <div class="absolute top-full left-0 mt-2 w-48 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50" style="background:#12122a;border:1px solid rgba(255,255,255,0.08)">
+            <a href="services.html#logo" class="block px-4 py-2.5 text-sm hover:text-orange-400" style="color:#94a3b8">Custom Logo Design</a>
+            <a href="services.html#webdev" class="block px-4 py-2.5 text-sm hover:text-orange-400" style="color:#94a3b8">Website Development</a>
+            <a href="services.html#uiux" class="block px-4 py-2.5 text-sm hover:text-orange-400" style="color:#94a3b8">UI/UX Design</a>
+          </div>
         </div>
-    </section>
+        <a href="courses.html" class="text-sm font-medium" style="color:#94a3b8">Courses</a>
+        <a href="pricing.html" class="text-sm font-medium" style="color:#94a3b8">Pricing</a>
+        <a href="about.html" class="text-sm font-medium" style="color:#94a3b8">About</a>
+        <a href="contact.html" class="text-sm font-medium" style="color:#94a3b8">Contact</a>
+      </div>
+      <div class="hidden md:flex items-center gap-3">
+        <a href="login.html" class="text-sm font-medium px-4 py-2 rounded-full border" style="color:#f1f5f9;border-color:rgba(255,255,255,0.2)">Login</a>
+        <a href="products.html" class="text-sm font-semibold px-4 py-2 rounded-full" style="background:#f97316;color:white">Buy Now</a>
+      </div>
+      <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg" style="color:#f1f5f9">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden pb-4">
+      <a href="index.html" class="block py-2 text-sm" style="color:#f97316">Home</a>
+      <a href="products.html" class="block py-2 text-sm" style="color:#94a3b8">Products</a>
+      <a href="services.html" class="block py-2 text-sm" style="color:#94a3b8">Services</a>
+      <a href="courses.html" class="block py-2 text-sm" style="color:#94a3b8">Courses</a>
+      <a href="pricing.html" class="block py-2 text-sm" style="color:#94a3b8">Pricing</a>
+      <a href="about.html" class="block py-2 text-sm" style="color:#94a3b8">About</a>
+      <a href="contact.html" class="block py-2 text-sm" style="color:#94a3b8">Contact</a>
+      <div class="flex gap-3 mt-3">
+        <a href="login.html" class="flex-1 text-center text-sm py-2 rounded-full border" style="color:#f1f5f9;border-color:rgba(255,255,255,0.2)">Login</a>
+        <a href="products.html" class="flex-1 text-center text-sm py-2 rounded-full font-semibold" style="background:#f97316;color:white">Buy Now</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<script>document.getElementById('mobileMenuBtn').addEventListener('click',function(){document.getElementById('mobileMenu').classList.toggle('hidden');});</script>
 
-    <!-- Services Section -->
-    <section id="services" class="py-16 sm:py-24">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="section-title text-3xl sm:text-4xl font-bold mb-12">Our Services</h2>
-            <div class="flex flex-col sm:flex-row justify-center items-center space-y-8 sm:space-y-0 sm:space-x-8">
-                <!-- Car Service Card -->
-                <div class="card bg-white p-8 rounded-2xl shadow-lg border border-gray-200 w-full sm:w-1/2 md:w-1/3">
-                    <img src="https://marketplace.canva.com/YWUOs/MAFiuhYWUOs/1/tl/canva-black-circle-glyph-car-icon-MAFiuhYWUOs.png" alt="Car Booking" class="mx-auto mb-6 rounded-full w-24 h-24 sm:w-32 sm:h-32">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-3">Car Booking</h3>
-                    <p class="text-gray-500 mb-4">Book a wide range of cars for city travel, outstation trips, or special events with ease.</p>
-                  <a href="car.html">  <button class="bg-blue-500 text-white font-medium py-2 px-6 rounded-full hover:bg-blue-600 transition duration-300">
-                        View Details
-                    </button></a>
-                </div>
-                <!-- Tractor Service Card -->
-                <div class="card bg-white p-8 rounded-2xl shadow-lg border border-gray-200 w-full sm:w-1/2 md:w-1/3 mt-8 sm:mt-0">
-                    <img src="https://png.pngtree.com/png-vector/20250716/ourlarge/pngtree-tractor-logo-vector-vector-png-image_7230253.png" alt="Tractor Plowing" class="mx-auto mb-6 rounded-full w-24 h-24 sm:w-32 sm:h-32">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-3">Tractor Plowing</h3>
-                    <p class="text-gray-500 mb-4">Get professional and timely tractor services for land plowing, cultivation, and other agricultural needs.</p>
-                   <a href="tractor.html"> <button class="bg-blue-500 text-white font-medium py-2 px-6 rounded-full hover:bg-blue-600 transition duration-300">
-                        View Details
-                    </button></a>
-                </div>
-            </div>
+<!-- Hero -->
+<section class="relative overflow-hidden py-20 md:py-32">
+  <div class="absolute inset-0" style="background:radial-gradient(ellipse at 50% 0%,rgba(139,92,246,0.15) 0%,transparent 60%)"></div>
+  <div class="absolute top-20 left-10 w-72 h-72 rounded-full blur-3xl opacity-20" style="background:#f97316"></div>
+  <div class="absolute bottom-20 right-10 w-96 h-96 rounded-full blur-3xl opacity-10" style="background:#8b5cf6"></div>
+  <div class="relative max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium mb-6" style="background:rgba(249,115,22,0.1);border:1px solid rgba(249,115,22,0.3);color:#f97316">
+      <span class="w-1.5 h-1.5 rounded-full bg-orange-400 animate-pulse"></span>
+      Premium Digital Marketplace
+    </div>
+    <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+      Build Your <span style="background:linear-gradient(135deg,#f97316,#8b5cf6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Digital Dream</span><br>With Us
+    </h1>
+    <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8" style="color:#94a3b8">Explore premium source code, website templates, software solutions, and professional design services — everything your digital project needs.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="products.html" class="px-8 py-3.5 rounded-full font-semibold text-white text-sm transition-transform hover:scale-105" style="background:linear-gradient(135deg,#f97316,#dc2626)">Browse Products</a>
+      <a href="services.html" class="px-8 py-3.5 rounded-full font-semibold text-sm transition-all hover:scale-105" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.15);color:#f1f5f9">View Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Bar -->
+<section class="py-8" style="background:#12122a;border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08)">
+  <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div><div class="text-2xl font-bold" style="color:#f97316">500+</div><div class="text-sm mt-1" style="color:#94a3b8">Products</div></div>
+      <div><div class="text-2xl font-bold" style="color:#8b5cf6">2800+</div><div class="text-sm mt-1" style="color:#94a3b8">Customers</div></div>
+      <div><div class="text-2xl font-bold" style="color:#f97316">4.9★</div><div class="text-sm mt-1" style="color:#94a3b8">Rating</div></div>
+      <div><div class="text-2xl font-bold" style="color:#8b5cf6">24/7</div><div class="text-sm mt-1" style="color:#94a3b8">Support</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Categories -->
+<section class="py-16 max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="text-center mb-12">
+    <h2 class="text-3xl font-bold mb-3">Browse <span style="color:#f97316">Categories</span></h2>
+    <p class="text-sm" style="color:#94a3b8">Find exactly what you need for your next project</p>
+  </div>
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+    <a href="products.html?cat=source-code" class="group p-6 rounded-xl border transition-all hover:border-orange-500/40 hover:scale-105" style="background:#12122a;border-color:rgba(255,255,255,0.08)">
+      <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background:linear-gradient(135deg,#f97316,#dc2626)">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+      </div>
+      <h3 class="font-semibold text-sm mb-1">Source Code</h3>
+      <p class="text-xs" style="color:#94a3b8">React, PHP, Python & more</p>
+    </a>
+    <a href="products.html?cat=static" class="group p-6 rounded-xl border transition-all hover:border-purple-500/40 hover:scale-105" style="background:#12122a;border-color:rgba(255,255,255,0.08)">
+      <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background:linear-gradient(135deg,#8b5cf6,#6366f1)">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+      </div>
+      <h3 class="font-semibold text-sm mb-1">Static Websites</h3>
+      <p class="text-xs" style="color:#94a3b8">HTML/CSS templates</p>
+    </a>
+    <a href="products.html?cat=dynamic" class="group p-6 rounded-xl border transition-all hover:border-blue-500/40 hover:scale-105" style="background:#12122a;border-color:rgba(255,255,255,0.08)">
+      <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background:linear-gradient(135deg,#06b6d4,#3b82f6)">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>
+      </div>
+      <h3 class="font-semibold text-sm mb-1">Dynamic Websites</h3>
+      <p class="text-xs" style="color:#94a3b8">Full-stack web apps</p>
+    </a>
+    <a href="products.html?cat=landing" class="group p-6 rounded-xl border transition-all hover:border-green-500/40 hover:scale-105" style="background:#12122a;border-color:rgba(255,255,255,0.08)">
+      <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background:linear-gradient(135deg,#10b981,#059669)">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
+      </div>
+      <h3 class="font-semibold text-sm mb-1">Landing Pages</h3>
+      <p class="text-xs" style="color:#94a3b8">High-converting pages</p>
+    </a>
+    <a href="products.html?cat=software" class="group p-6 rounded-xl border transition-all hover:border-yellow-500/40 hover:scale-105" style="background:#12122a;border-color:rgba(255,255,255,0.08)">
+      <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background:linear-gradient(135deg,#f59e0b,#f97316)">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+      </div>
+      <h3 class="font-semibold text-sm mb-1">Software</h3>
+      <p class="text-xs" style="color:#94a3b8">Desktop & ERP solutions</p>
+    </a>
+    <a href="courses.html" class="group p-6 rounded-xl border transition-all hover:border-pink-500/40 hover:scale-105" style="background:#12122a;border-color:rgba(255,255,255,0.08)">
+      <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background:linear-gradient(135deg,#ec4899,#8b5cf6)">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+      </div>
+      <h3 class="font-semibold text-sm mb-1">Courses</h3>
+      <p class="text-xs" style="color:#94a3b8">Learn from experts</p>
+    </a>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="py-16" style="background:#12122a;border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08)">
+  <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold mb-3">Why Choose <span style="color:#f97316">Us?</span></h2>
+      <p class="text-sm" style="color:#94a3b8">We deliver excellence in every digital product and service</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="p-6 rounded-xl text-center" style="background:#0a0a14;border:1px solid rgba(255,255,255,0.08)">
+        <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4" style="background:rgba(249,115,22,0.1)">
+          <svg class="w-6 h-6" style="color:#f97316" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
         </div>
-    </section>
-
-    <!-- About Us Section -->
-    <section id="about" class="bg-gray-100 py-16 sm:py-24">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="section-title text-3xl sm:text-4xl font-bold mb-12">About Us</h2>
-            <div class="max-w-3xl mx-auto text-gray-600 leading-relaxed">
-                <p class="mb-6">At Verma Vahan Seva Booking, we are committed to providing reliable and efficient services to our customers. Our dual-service platform caters to both urban transportation needs with our modern car fleet and rural agricultural requirements with our powerful tractors.</p>
-                <p>Our mission is to bridge the gap between mobility and agriculture, ensuring that everyone gets the right vehicle for their needs, right when they need it. We strive for excellence, professionalism, and customer satisfaction in every service we provide.</p>
-            </div>
+        <h3 class="font-semibold text-sm mb-2">Premium Quality</h3>
+        <p class="text-xs" style="color:#94a3b8">Every product is hand-crafted and thoroughly tested before release</p>
+      </div>
+      <div class="p-6 rounded-xl text-center" style="background:#0a0a14;border:1px solid rgba(255,255,255,0.08)">
+        <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4" style="background:rgba(139,92,246,0.1)">
+          <svg class="w-6 h-6" style="color:#8b5cf6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
         </div>
-    </section>
-
-    <!-- Contact & Booking Section -->
-    <section id="contact" class="py-16 sm:py-24">
-        <div class="container mx-auto px-4">
-            <h2 class="section-title text-3xl sm:text-4xl font-bold text-center mb-12">Get in Touch / Book Your Service</h2>
-            <div class="flex flex-col md:flex-row justify-center md:space-x-12 space-y-12 md:space-y-0">
-                <!-- Contact Information -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 w-full md:w-1/2">
-                    <h3 class="text-xl sm:text-2xl font-semibold mb-6 text-gray-800">Contact Information</h3>
-                    <ul class="text-gray-600 space-y-4 text-lg">
-                        <li class="flex items-center">
-                            <svg class="w-6 h-6 mr-3 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.158l-2.26 1.13a11.042 11.042 0 005.516 5.516l1.13-2.26a1 1 0 011.158-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-11a2 2 0 01-2-2z"></path></svg>
-                            <span>+91 8528961320</span>
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-6 h-6 mr-3 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                            <span>shiva005ve@gmail.com</span>
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-6 h-6 mr-3 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                            <span>71 , station road , kurebhar , sultanpur , 228151</span>
-                            
-                        </li>
-                    </ul>
-                      <div class="mt-6">
-                        <p class="font-semibold text-gray-700">Contact us for car related query :</p>
-                        <div class="flex space-x-4 mt-2">
-                                 <li class="flex items-center">
-                            <svg class="w-6 h-6 mr-3 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.158l-2.26 1.13a11.042 11.042 0 005.516 5.516l1.13-2.26a1 1 0 011.158-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-11a2 2 0 01-2-2z"></path></svg>
-                            <span>+91 8930836261</span>
-                        </li>
-                        </div>
-                    </div>
-                     <div class="mt-6">
-                        <p class="font-semibold text-gray-700">Contact us for tractor related query :</p>
-                        <div class="flex space-x-4 mt-2">
-                                 <li class="flex items-center">
-                            <svg class="w-6 h-6 mr-3 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.158l-2.26 1.13a11.042 11.042 0 005.516 5.516l1.13-2.26a1 1 0 011.158-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-11a2 2 0 01-2-2z"></path></svg>
-                            <span>+91 8528961320</span>
-                        </li>
-                        </div>
-                    </div>
-                    <div class="mt-6">
-                        <p class="font-semibold text-gray-700">Follow Us:</p>
-                        <div class="flex space-x-4 mt-2">
-                            <a target="_blank" href="https://www.instagram.com/shivaverma05_/" class="text-blue-600 hover:text-blue-800 transition duration-300"><div class="box"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
-</svg></div></a>
-                            <a href="https://wa.me/qr/LXTXS3VTJLZ4H1" target="_blank" class="text-blue-400 hover:text-blue-600 transition duration-300"><div class="box"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
-  <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
-</svg></div></a>
-                            <a target="_blank" href="https://github.com/shivaverma05" class="text-blue-400 hover:text-blue-600 transition duration-300"><div class="box"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
-</svg></div></a>
-                            <a href="https://www.linkedin.com/in/shiva-verma-556b08328/" target="_blank" class="text-pink-600 hover:text-pink-800 transition duration-300"><div class="box"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
-</svg></div></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Booking Form -->
-                <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 w-full md:w-1/2">
-                    <h3 class="text-xl sm:text-2xl font-semibold mb-6 text-gray-800">Booking Form</h3>
-                    <form id="bookingForm" class="space-y-4" action="https://api.web3forms.com/submit" method="POST">
-                        <div>
-                             <input type="hidden" name="access_key" value="c2a920df-7fe4-4f86-a484-44262652f3a5">
-                            <label for="serviceType" class="block text-gray-700 font-medium mb-1">Service Type</label>
-                            <select id="serviceType" name="serviceType" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
-                                <option value="car">Car Booking</option>
-                                <option value="tractor">Tractor Plowing</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="name" class="block text-gray-700 font-medium mb-1">Your Name</label>
-                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
-                        </div>
-                        <div>
-                            <label for="phone" class="block text-gray-700 font-medium mb-1">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
-                        </div>
-                        <div>
-                            <label for="message" class="block text-gray-700 font-medium mb-1">Message</label>
-                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
-                        </div>
-                        <input type="submit" class="w-full bg-green-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-green-600 transition duration-300">
-                    </input>
-                    </form>
-                    <div id="statusMessage" class="mt-4 hidden p-3 rounded-lg text-white font-semibold text-center"></div>
-                </div>
-            </div>
+        <h3 class="font-semibold text-sm mb-2">Instant Download</h3>
+        <p class="text-xs" style="color:#94a3b8">Get access to your purchase immediately after payment</p>
+      </div>
+      <div class="p-6 rounded-xl text-center" style="background:#0a0a14;border:1px solid rgba(255,255,255,0.08)">
+        <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4" style="background:rgba(249,115,22,0.1)">
+          <svg class="w-6 h-6" style="color:#f97316" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
         </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2025 Verma Vahan Seva. All Rights Reserved.</p>
-            <p>Devlope by <a style="color: orange;" href="https://github.com/shivaverma05">Shiva verma</a> </p>
+        <h3 class="font-semibold text-sm mb-2">24/7 Support</h3>
+        <p class="text-xs" style="color:#94a3b8">Round-the-clock assistance via WhatsApp and email</p>
+      </div>
+      <div class="p-6 rounded-xl text-center" style="background:#0a0a14;border:1px solid rgba(255,255,255,0.08)">
+        <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4" style="background:rgba(139,92,246,0.1)">
+          <svg class="w-6 h-6" style="color:#8b5cf6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
         </div>
-    </footer>
+        <h3 class="font-semibold text-sm mb-2">Free Updates</h3>
+        <p class="text-xs" style="color:#94a3b8">Lifetime free updates on all purchased products</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const bookNowBtn = document.getElementById('bookNowBtn');
-            const ctaBtn = document.getElementById('ctaBtn');
-            const mobileBookBtn = document.getElementById('mobileBookBtn');
-            const bookingForm = document.getElementById('bookingForm');
-            const statusMessage = document.getElementById('statusMessage');
+<!-- Popular Products -->
+<section class="py-16 max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="flex items-center justify-between mb-12">
+    <div>
+      <h2 class="text-3xl font-bold mb-2">Popular <span style="color:#f97316">Products</span></h2>
+      <p class="text-sm" style="color:#94a3b8">Our best-selling digital products</p>
+    </div>
+    <a href="products.html" class="text-sm font-medium px-4 py-2 rounded-full" style="color:#f97316;border:1px solid rgba(249,115,22,0.3)">View All</a>
+  </div>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Product 1 -->
+    <div class="rounded-xl overflow-hidden border transition-all hover:scale-[1.02] hover:shadow-2xl" style="background:#12122a;border-color:rgba(255,255,255,0.08)">
+      <div class="h-44 flex items-center justify-center" style="background:linear-gradient(135deg,#f97316,#dc2626)">
+        <svg class="w-16 h-16 text-white opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+      </div>
+      <div class="p-5">
+        <div class="flex gap-2 mb-2 flex-wrap">
+          <span class="text-xs px-2 py-0.5 rounded-full" style="background:rgba(249,115,22,0.1);color:#f97316">Source Code</span>
+        </div>
+        <h3 class="font-semibold text-sm mb-1">E-Commerce React App</h3>
+        <div class="flex items-center gap-1 mb-3"><span class="text-xs" style="color:#f59e0b">★★★★★</span><span class="text-xs" style="color:#94a3b8">4.8</span></div>
+        <div class="flex items-center justify-between">
+          <span class="font-bold" style="color:#f97316">₹1,499</span>
+          <a href="product-detail.html" class="text-xs px-3 py-1.5 rounded-full font-medium" style="background:#f97316;color:white">Buy Now</a>
+        </div>
+      </div>
+    </div>
+    <!-- Product 2 -->
+    <div class="rounded-xl overflow-hidden border transition-all hover:scale-[1.02] hover:shadow-2xl" style="background:#12122a;border-color:rgba(255,255,255,0.08)">
+      <div class="h-44 flex items-center justify-center" style="background:linear-gradient(135deg,#8b5cf6,#6366f1)">
+        <svg class="w-16 h-16 text-white opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+      </div>
+      <div class="p-5">
+        <div class="flex gap-2 mb-2"><span class="text-xs px-2 py-0.5 rounded-full" style="background:rgba(139,92,246,0.1);color:#8b5cf6">Static</span></div>
+        <h3 class="font-semibold text-sm mb-1">Portfolio Website Template</h3>
+        <div class="flex items-center gap-1 mb-3"><span class="text-xs" style="color:#f59e0b">★★★★☆</span><span class="text-xs" style="color:#94a3b8">4.5</span></div>
+        <div class="flex items-center justify-between">
+          <span class="font-bold" style="color:#f97316">₹499</span>
+          <a href="product-detail.html" class="text-xs px-3 py-1.5 rounded-full font-medium" style="background:#f97316;color:white">Buy Now</a>
+        </div>
+      </div>
+    </div>
+    <!-- Product 3 -->
+    <div class="rounded-xl overflow-hidden border transition-all hover:scale-[1.02] hover:shadow-2xl" style="background:#12122a;border-color:rgba(255,255,255,0.08)">
+      <div class="h-44 flex items-center justify-center" style="background:linear-gradient(135deg,#f59e0b,#f97316)">
+        <svg class="w-16 h-16 text-white opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+      </div>
+      <div class="p-5">
+        <div class="flex gap-2 mb-2"><span class="text-xs px-2 py-0.5 rounded-full" style="background:rgba(245,158,11,0.1);color:#f59e0b">Software</span></div>
+        <h3 class="font-semibold text-sm mb-1">Inventory Management System</h3>
+        <div class="flex items-center gap-1 mb-3"><span class="text-xs" style="color:#f59e0b">★★★★★</span><span class="text-xs" style="color:#94a3b8">4.9</span></div>
+        <div class="flex items-center justify-between">
+          <span class="font-bold" style="color:#f97316">₹3,499</span>
+          <a href="product-detail.html" class="text-xs px-3 py-1.5 rounded-full font-medium" style="background:#f97316;color:white">Buy Now</a>
+        </div>
+      </div>
+    </div>
+    <!-- Product 4 -->
+    <div class="rounded-xl overflow-hidden border transition-all hover:scale-[1.02] hover:shadow-2xl" style="background:#12122a;border-color:rgba(255,255,255,0.08)">
+      <div class="h-44 flex items-center justify-center" style="background:linear-gradient(135deg,#10b981,#059669)">
+        <svg class="w-16 h-16 text-white opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
+      </div>
+      <div class="p-5">
+        <div class="flex gap-2 mb-2"><span class="text-xs px-2 py-0.5 rounded-full" style="background:rgba(16,185,129,0.1);color:#10b981">Landing Page</span></div>
+        <h3 class="font-semibold text-sm mb-1">SaaS Landing Page</h3>
+        <div class="flex items-center gap-1 mb-3"><span class="text-xs" style="color:#f59e0b">★★★★☆</span><span class="text-xs" style="color:#94a3b8">4.6</span></div>
+        <div class="flex items-center justify-between">
+          <span class="font-bold" style="color:#f97316">₹799</span>
+          <a href="product-detail.html" class="text-xs px-3 py-1.5 rounded-full font-medium" style="background:#f97316;color:white">Buy Now</a>
+        </div>
+      </div>
+    </div>
+    <!-- Product 5 -->
+    <div class="rounded-xl overflow-hidden border transition-all hover:scale-[1.02] hover:shadow-2xl" style="background:#12122a;border-color:rgba(255,255,255,0.08)">
+      <div class="h-44 flex items-center justify-center" style="background:linear-gradient(135deg,#f97316,#8b5cf6)">
+        <svg class="w-16 h-16 text-white opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/></svg>
+      </div>
+      <div class="p-5">
+        <div class="flex gap-2 mb-2"><span class="text-xs px-2 py-0.5 rounded-full" style="background:rgba(249,115,22,0.1);color:#f97316">Source Code</span></div>
+        <h3 class="font-semibold text-sm mb-1">Cryptocurrency Dashboard</h3>
+        <div class="flex items-center gap-1 mb-3"><span class="text-xs" style="color:#f59e0b">★★★★★</span><span class="text-xs" style="color:#94a3b8">4.8</span></div>
+        <div class="flex items-center justify-between">
+          <span class="font-bold" style="color:#f97316">₹2,499</span>
+          <a href="product-detail.html" class="text-xs px-3 py-1.5 rounded-full font-medium" style="background:#f97316;color:white">Buy Now</a>
+        </div>
+      </div>
+    </div>
+    <!-- Product 6 -->
+    <div class="rounded-xl overflow-hidden border transition-all hover:scale-[1.02] hover:shadow-2xl" style="background:#12122a;border-color:rgba(255,255,255,0.08)">
+      <div class="h-44 flex items-center justify-center" style="background:linear-gradient(135deg,#dc2626,#f97316)">
+        <svg class="w-16 h-16 text-white opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+      </div>
+      <div class="p-5">
+        <div class="flex gap-2 mb-2"><span class="text-xs px-2 py-0.5 rounded-full" style="background:rgba(220,38,38,0.1);color:#dc2626">Software</span></div>
+        <h3 class="font-semibold text-sm mb-1">School Management System</h3>
+        <div class="flex items-center gap-1 mb-3"><span class="text-xs" style="color:#f59e0b">★★★★★</span><span class="text-xs" style="color:#94a3b8">4.9</span></div>
+        <div class="flex items-center justify-between">
+          <span class="font-bold" style="color:#f97316">₹4,999</span>
+          <a href="product-detail.html" class="text-xs px-3 py-1.5 rounded-full font-medium" style="background:#f97316;color:white">Buy Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-            // Toggle mobile menu
-            mobileMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
+<!-- Testimonials -->
+<section class="py-16" style="background:#12122a;border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08)">
+  <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold mb-3">What Our <span style="color:#f97316">Customers Say</span></h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="p-6 rounded-xl" style="background:#0a0a14;border:1px solid rgba(255,255,255,0.08)">
+        <div class="flex items-center gap-1 mb-3"><span style="color:#f59e0b">★★★★★</span></div>
+        <p class="text-sm mb-4" style="color:#94a3b8">"The e-commerce source code saved me weeks of development time. Excellent quality and well-documented. Highly recommend!"</p>
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm" style="background:linear-gradient(135deg,#f97316,#8b5cf6)">AS</div>
+          <div><div class="text-sm font-medium">Arjun Sharma</div><div class="text-xs" style="color:#94a3b8">Mumbai</div></div>
+        </div>
+      </div>
+      <div class="p-6 rounded-xl" style="background:#0a0a14;border:1px solid rgba(255,255,255,0.08)">
+        <div class="flex items-center gap-1 mb-3"><span style="color:#f59e0b">★★★★★</span></div>
+        <p class="text-sm mb-4" style="color:#94a3b8">"Amazing UI designs and responsive templates. The support team is super helpful. Got my project done in record time."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm" style="background:linear-gradient(135deg,#8b5cf6,#06b6d4)">PN</div>
+          <div><div class="text-sm font-medium">Pooja Nair</div><div class="text-xs" style="color:#94a3b8">Bangalore</div></div>
+        </div>
+      </div>
+      <div class="p-6 rounded-xl" style="background:#0a0a14;border:1px solid rgba(255,255,255,0.08)">
+        <div class="flex items-center gap-1 mb-3"><span style="color:#f59e0b">★★★★★</span></div>
+        <p class="text-sm mb-4" style="color:#94a3b8">"Best digital studio for Indian developers. Affordable prices, premium quality. The school management system is a game-changer."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm" style="background:linear-gradient(135deg,#10b981,#f97316)">VS</div>
+          <div><div class="text-sm font-medium">Vikram Singh</div><div class="text-xs" style="color:#94a3b8">Delhi</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-            // Scroll to contact section when a button is clicked
-            const scrollToContact = () => {
-                const contactSection = document.getElementById('contact');
-                contactSection.scrollIntoView({ behavior: 'smooth' });
-                // Hide mobile menu after click
-                mobileMenu.classList.add('hidden');
-            };
+<!-- Newsletter -->
+<section class="py-16 max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="rounded-2xl p-10 text-center" style="background:linear-gradient(135deg,rgba(249,115,22,0.1),rgba(139,92,246,0.1));border:1px solid rgba(255,255,255,0.08)">
+    <h2 class="text-2xl font-bold mb-3">Stay Updated with <span style="color:#f97316">New Products</span></h2>
+    <p class="text-sm mb-6" style="color:#94a3b8">Subscribe to get notified about new digital products, courses, and exclusive deals</p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto">
+      <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-full text-sm outline-none" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.15);color:#f1f5f9">
+      <button class="px-6 py-3 rounded-full font-semibold text-sm text-white" style="background:#f97316">Subscribe</button>
+    </div>
+  </div>
+</section>
 
-            bookNowBtn.addEventListener('click', scrollToContact);
-            ctaBtn.addEventListener('click', scrollToContact);
-            mobileBookBtn.addEventListener('click', scrollToContact);
-
-            // Handle form submission
-            bookingForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                
-                // Simulate form submission
-                const formData = new FormData(bookingForm);
-                const data = Object.fromEntries(formData.entries());
-
-                console.log('Form data:', data);
-
-                // Show success message
-                statusMessage.classList.remove('hidden', 'bg-red-500');
-                statusMessage.classList.add('bg-green-500');
-                statusMessage.textContent = 'Your request has been submitted successfully! We will contact you soon.';
-
-                // Reset the form after a short delay
-                setTimeout(() => {
-                    bookingForm.reset();
-                    statusMessage.classList.add('hidden');
-                }, 3000);
-            });
-        });
-    </script>
+<footer style="background:#0d0d1f;border-top:1px solid rgba(255,255,255,0.08);" class="mt-20">
+  <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+      <div class="lg:col-span-2">
+        <a href="index.html" class="flex items-center gap-2 mb-4">
+          <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background:linear-gradient(135deg,#f97316,#8b5cf6)">
+            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2zm0 14a6 6 0 110-12 6 6 0 010 12z"/></svg>
+          </div>
+          <span class="text-white font-bold text-lg">Verma <span style="color:#f97316">Digital</span> Studio</span>
+        </a>
+        <p class="text-sm leading-relaxed mb-4" style="color:#94a3b8">Your one-stop destination for premium digital products, source code, website templates, and professional design services.</p>
+        <div class="flex gap-3">
+          <a href="#" class="w-8 h-8 rounded-lg flex items-center justify-center" style="background:rgba(255,255,255,0.05);color:#94a3b8">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+          </a>
+          <a href="#" class="w-8 h-8 rounded-lg flex items-center justify-center" style="background:rgba(255,255,255,0.05);color:#94a3b8">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-semibold text-sm mb-4">Products</h4>
+        <ul class="space-y-2">
+          <li><a href="products.html?cat=source-code" class="text-sm" style="color:#94a3b8">Source Code</a></li>
+          <li><a href="products.html?cat=static" class="text-sm" style="color:#94a3b8">Static Websites</a></li>
+          <li><a href="products.html?cat=dynamic" class="text-sm" style="color:#94a3b8">Dynamic Websites</a></li>
+          <li><a href="products.html?cat=landing" class="text-sm" style="color:#94a3b8">Landing Pages</a></li>
+          <li><a href="products.html?cat=software" class="text-sm" style="color:#94a3b8">Software</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-sm mb-4">Services</h4>
+        <ul class="space-y-2">
+          <li><a href="services.html#logo" class="text-sm" style="color:#94a3b8">Logo Design</a></li>
+          <li><a href="services.html#webdev" class="text-sm" style="color:#94a3b8">Website Development</a></li>
+          <li><a href="services.html#uiux" class="text-sm" style="color:#94a3b8">UI/UX Design</a></li>
+          <li><a href="courses.html" class="text-sm" style="color:#94a3b8">Courses</a></li>
+          <li><a href="pricing.html" class="text-sm" style="color:#94a3b8">Pricing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-sm mb-4">Company</h4>
+        <ul class="space-y-2">
+          <li><a href="about.html" class="text-sm" style="color:#94a3b8">About Us</a></li>
+          <li><a href="contact.html" class="text-sm" style="color:#94a3b8">Contact</a></li>
+          <li><a href="#" class="text-sm" style="color:#94a3b8">Privacy Policy</a></li>
+          <li><a href="#" class="text-sm" style="color:#94a3b8">Terms of Service</a></li>
+          <li><a href="#" class="text-sm" style="color:#94a3b8">Refund Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4" style="border-top:1px solid rgba(255,255,255,0.08)">
+      <p class="text-sm" style="color:#94a3b8">© 2024 Verma Digital Studio. All rights reserved.</p>
+      <p class="text-sm" style="color:#94a3b8">Made with ❤️ by Verma Digital Studio</p>
+    </div>
+  </div>
+</footer>
 </body>
-
 </html>
-
-
