@@ -99,12 +99,12 @@
 <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
   <div class="flex flex-col lg:flex-row gap-4 items-start lg:items-center justify-between mb-8">
     <div class="flex flex-wrap gap-2">
-      <button onclick="filterProducts('all')" class="filter-btn active text-xs px-4 py-2 rounded-full border transition-all" style="border-color:rgba(255,255,255,0.15)" data-cat="all">All</button>
-      <button onclick="filterProducts('source-code')" class="filter-btn text-xs px-4 py-2 rounded-full border transition-all" style="color:#94a3b8;border-color:rgba(255,255,255,0.15)" data-cat="source-code">Source Code</button>
-      <button onclick="filterProducts('static')" class="filter-btn text-xs px-4 py-2 rounded-full border transition-all" style="color:#94a3b8;border-color:rgba(255,255,255,0.15)" data-cat="static">Static</button>
-      <button onclick="filterProducts('dynamic')" class="filter-btn text-xs px-4 py-2 rounded-full border transition-all" style="color:#94a3b8;border-color:rgba(255,255,255,0.15)" data-cat="dynamic">Dynamic</button>
-      <button onclick="filterProducts('landing')" class="filter-btn text-xs px-4 py-2 rounded-full border transition-all" style="color:#94a3b8;border-color:rgba(255,255,255,0.15)" data-cat="landing">Landing Pages</button>
-      <button onclick="filterProducts('software')" class="filter-btn text-xs px-4 py-2 rounded-full border transition-all" style="color:#94a3b8;border-color:rgba(255,255,255,0.15)" data-cat="software">Software</button>
+      <button onclick="filterProducts('all', this)" class="filter-btn active text-xs px-4 py-2 rounded-full border transition-all" style="border-color:rgba(255,255,255,0.15)" data-cat="all">All</button>
+      <button onclick="filterProducts('source-code', this)" class="filter-btn text-xs px-4 py-2 rounded-full border transition-all" style="color:#94a3b8;border-color:rgba(255,255,255,0.15)" data-cat="source-code">Source Code</button>
+      <button onclick="filterProducts('static', this)" class="filter-btn text-xs px-4 py-2 rounded-full border transition-all" style="color:#94a3b8;border-color:rgba(255,255,255,0.15)" data-cat="static">Static</button>
+      <button onclick="filterProducts('dynamic', this)" class="filter-btn text-xs px-4 py-2 rounded-full border transition-all" style="color:#94a3b8;border-color:rgba(255,255,255,0.15)" data-cat="dynamic">Dynamic</button>
+      <button onclick="filterProducts('landing', this)" class="filter-btn text-xs px-4 py-2 rounded-full border transition-all" style="color:#94a3b8;border-color:rgba(255,255,255,0.15)" data-cat="landing">Landing Pages</button>
+      <button onclick="filterProducts('software', this)" class="filter-btn text-xs px-4 py-2 rounded-full border transition-all" style="color:#94a3b8;border-color:rgba(255,255,255,0.15)" data-cat="software">Software</button>
     </div>
     <div class="flex gap-3 items-center w-full lg:w-auto">
       <div class="relative flex-1 lg:w-64">
@@ -329,9 +329,9 @@
 </footer>
 
 <script>
-  function filterProducts(cat) {
+  function filterProducts(cat, btn) {
     document.querySelectorAll('.filter-btn').forEach(b => { b.classList.remove('active'); b.style.color='#94a3b8'; });
-    event.target.classList.add('active'); event.target.style.color='white';
+    btn.classList.add('active'); btn.style.color='white';
     document.querySelectorAll('.product-card').forEach(card => {
       if(cat==='all' || card.dataset.cat===cat) card.style.display=''; else card.style.display='none';
     });

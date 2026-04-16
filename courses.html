@@ -62,9 +62,9 @@
 <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
   <!-- Filter Tabs -->
   <div class="flex gap-3 mb-8 flex-wrap">
-    <button onclick="filterCourses('all')" class="filter-btn active text-xs px-5 py-2 rounded-full border" style="border-color:rgba(255,255,255,0.15)" data-type="all">All Courses</button>
-    <button onclick="filterCourses('free')" class="filter-btn text-xs px-5 py-2 rounded-full border" style="color:#94a3b8;border-color:rgba(255,255,255,0.15)" data-type="free">Free</button>
-    <button onclick="filterCourses('paid')" class="filter-btn text-xs px-5 py-2 rounded-full border" style="color:#94a3b8;border-color:rgba(255,255,255,0.15)" data-type="paid">Paid</button>
+    <button onclick="filterCourses('all', this)" class="filter-btn active text-xs px-5 py-2 rounded-full border" style="border-color:rgba(255,255,255,0.15)" data-type="all">All Courses</button>
+    <button onclick="filterCourses('free', this)" class="filter-btn text-xs px-5 py-2 rounded-full border" style="color:#94a3b8;border-color:rgba(255,255,255,0.15)" data-type="free">Free</button>
+    <button onclick="filterCourses('paid', this)" class="filter-btn text-xs px-5 py-2 rounded-full border" style="color:#94a3b8;border-color:rgba(255,255,255,0.15)" data-type="paid">Paid</button>
   </div>
 
   <!-- Course Grid -->
@@ -204,9 +204,9 @@
   </div>
 </footer>
 <script>
-  function filterCourses(type) {
+  function filterCourses(type, btn) {
     document.querySelectorAll('.filter-btn').forEach(b=>{b.classList.remove('active');b.style.color='#94a3b8';});
-    event.target.classList.add('active'); event.target.style.color='white';
+    btn.classList.add('active'); btn.style.color='white';
     document.querySelectorAll('.course-card').forEach(c=>{
       if(type==='all'||c.dataset.type===type) c.style.display=''; else c.style.display='none';
     });

@@ -142,7 +142,7 @@
           <div class="border-t pt-3 mt-3 flex justify-between" style="border-color:rgba(255,255,255,0.08)">
             <span style="color:#94a3b8">Subtotal</span><span>₹3,296</span>
           </div>
-          <div class="flex justify-between" id="discountRow" style="display:none!important">
+          <div class="flex justify-between hidden" id="discountRow">
             <span style="color:#10b981">Discount (20%)</span><span style="color:#10b981" id="discountAmt">-₹659</span>
           </div>
           <div class="flex justify-between"><span style="color:#94a3b8">Tax (GST 18%)</span><span>₹593</span></div>
@@ -187,8 +187,6 @@
     const msg = document.getElementById('couponMsg');
     if(code === 'VERMA20') {
       discountApplied = true;
-      document.getElementById('discountRow').style.display = 'flex';
-      document.getElementById('discountRow').style.removeProperty('display');
       document.getElementById('discountRow').classList.remove('hidden');
       document.getElementById('totalDisplay').textContent = '₹3,230';
       msg.textContent = '✓ Coupon applied! 20% discount added.';

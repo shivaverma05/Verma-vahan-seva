@@ -145,7 +145,7 @@
     const email = document.getElementById('lEmail').value.trim();
     const password = document.getElementById('lPassword').value;
     if(!email || !password) { alert('Please fill all fields'); return; }
-    if(password.length < 6) { alert('Password must be at least 6 characters'); return; }
+    if(password.length < 8) { alert('Password must be at least 8 characters'); return; }
     alert('Login successful! Redirecting to dashboard...');
     window.location.href = 'dashboard.html';
   }
